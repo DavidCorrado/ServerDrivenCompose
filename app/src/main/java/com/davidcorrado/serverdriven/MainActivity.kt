@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
                                     alignment = ServerAlignment.CENTER,
                                     items = listOf(
                                         ServerImage(
-                                            drawableRes = R.drawable.ic_android,
+                                            drawableRes = R.drawable.ic_image,
                                             adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 40f,
@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
                                     modifier = ServerModifier(paddingTop = 20f),
                                     items = listOf(
                                         ServerImage(
-                                            drawableRes = R.drawable.ic_android,
+                                            drawableRes = R.drawable.ic_image,
                                             adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 48f,
