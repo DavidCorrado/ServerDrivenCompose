@@ -12,7 +12,7 @@ fun SDBubble(serverBubble: ServerBubble) {
     AppBubble(
         drawableRes = serverBubble.drawableRes,
         text = serverBubble.text.text,
-        modifier = Modifier.semantics {
+        modifier = (serverBubble.modifier?.toModifier() ?: Modifier).semantics {
             contentDescription = serverBubble.getTextAda()
         },
         backgroundColor = serverBubble.getBackgroundColor(),

@@ -6,6 +6,8 @@ import com.squareup.moshi.JsonClass
 data class ServerColumn(
     val type: ServerItemType = ServerItemType.COLUMN,
     val modifier: ServerModifier? = null,
-    val alignment: ServerAlignment?= null,
+    val alignment: ServerAlignment? = null,
+    val color: String? = null,
+    val colorCornerRadius: Float? = null,
     val items: List<Any>
 )

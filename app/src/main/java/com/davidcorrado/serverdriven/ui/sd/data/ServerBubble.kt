@@ -12,6 +12,7 @@ data class ServerBubble(
     val drawableRes: Int? = null,
     val backgroundColor: String? = null,
     val strokeColor: String? = null,
+    val modifier: ServerModifier? = null,
 ) {
 
     fun getBackgroundColor() = backgroundColor?.toColor() ?: Color.White
