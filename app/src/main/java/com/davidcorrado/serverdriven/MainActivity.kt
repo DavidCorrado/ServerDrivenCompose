@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
                                         "Sleep",
                                         modifier = ServerModifier(paddingStart = 7f)
                                     ),
-                                    //Spacer
+                                    ServerSpacer("type"),
                                     ServerText("Nov 1 ", modifier = null),
                                     ServerText("8:31 AM", modifier = null)
                                 )

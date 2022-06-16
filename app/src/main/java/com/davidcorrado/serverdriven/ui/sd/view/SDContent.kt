@@ -1,30 +1,43 @@
 package com.davidcorrado.serverdriven.ui.sd.view
 
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.davidcorrado.serverdriven.ui.sd.data.*
 
 @Composable
-fun SDContent(items: List<Any>){
-    for(item in items){
+fun SDContent(items: List<Any>, columnScope: ColumnScope? = null, rowScope: RowScope? = null) {
+    for (item in items) {
         when (item) {
             is ServerCard -> {
-                SDCard(modifier = item.modifier?.toModifier()?:Modifier) {
+                SDCard(modifier = item.modifier?.toModifier() ?: Modifier) {
                     SDContent(items = item.items)
                 }
             }
             is ServerColumn -> {
-                SDColumn(modifier = item.modifier?.toModifier()?:Modifier, horizontalAlignment = if(item.alignment == ServerAlignment.CENTER)  Alignment.CenterHorizontally else Alignment.Start) {
-                    SDContent(items = item.items)
-                }}
+                SDColumn(
+                    modifier = item.modifier?.toModifier() ?: Modifier,
+                    horizontalAlignment = if (item.alignment == ServerAlignment.CENTER) Alignment.CenterHorizontally else Alignment.Start
+                ) {
+                    SDContent(items = item.items, columnScope = this)
+                }
+            }
             is ServerRow -> {
-                SDRow(modifier = item.modifier?.toModifier()?:Modifier, verticalAlignment = if(item.alignment == ServerAlignment.CENTER)  Alignment.CenterVertically else Alignment.Top) {
-                    SDContent(items = item.items)
+                SDRow(
+                    modifier = item.modifier?.toModifier() ?: Modifier,
+                    verticalAlignment = if (item.alignment == ServerAlignment.CENTER) Alignment.CenterVertically else Alignment.Top
+                ) {
+                    SDContent(items = item.items, rowScope = this)
                 }
             }
             is ServerImage -> {
-                SDImage(drawableRes = item.drawableRes, contentDescription = item.contentDescription, modifier =  item.modifier?.toModifier()?:Modifier)
+                SDImage(
+                    drawableRes = item.drawableRes,
+                    contentDescription = item.contentDescription,
+                    modifier = item.modifier?.toModifier() ?: Modifier
+                )
             }
             is ServerText -> {
                 SDText(
@@ -32,13 +45,13 @@ fun SDContent(items: List<Any>){
                     modifier = item.modifier?.toModifier() ?: Modifier
                 )
             }
+            is ServerSpacer -> {
+                if(columnScope !=null) {
+                    return columnScope.SDSpacer()
+                } else if(rowScope != null){
+                    return rowScope.SDSpacer()
+                }
+            }
         }
-//        else if(item is ServerSpacer) {
-//            if(content is ColumnScope) {
-//                return SDSpacer()
-//            } else if(content is RowScope){
-//                return content.SDSpacer()
-//            }
-//        }
     }
 }
