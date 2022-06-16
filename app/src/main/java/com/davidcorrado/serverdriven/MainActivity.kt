@@ -20,54 +20,58 @@ import com.squareup.moshi.Moshi
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val items = ServerResponse(listOf(
-            ServerCard(
-                modifier = null, items = listOf(
-                    ServerColumn(
-                        modifier = ServerModifier(
-                            paddingStart = 20f,
-                            paddingEnd = 20f,
-                            paddingTop = 24f,
-                            paddingBottom = 24f
-                        ), alignment = null, items = listOf(
-                            ServerRow(
-                                modifier = null, alignment = ServerAlignment.CENTER, items = listOf(
-                                    ServerImage(
-                                        drawableRes = R.drawable.ic_android,
-                                        contentDescription = "Android",
-                                        modifier = ServerModifier(
-                                            width = 40f,
-                                            height = 40f
+        val items = ServerResponse(
+            listOf(
+                ServerCard(
+                    modifier = null, items = listOf(
+                        ServerColumn(
+                            modifier = ServerModifier(
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 24f,
+                                paddingBottom = 24f
+                            ), alignment = null, items = listOf(
+                                ServerRow(
+                                    modifier = null,
+                                    alignment = ServerAlignment.CENTER,
+                                    items = listOf(
+                                        ServerImage(
+                                            drawableRes = R.drawable.ic_android,
+                                            contentDescription = "Android",
+                                            modifier = ServerModifier(
+                                                width = 40f,
+                                                height = 40f
+                                            )
+                                        ),
+                                        ServerText(
+                                            text = "Sleep",
+                                            modifier = ServerModifier(paddingStart = 7f)
+                                        ),
+                                        ServerSpacer(),
+                                        ServerText(text = "Nov 1 ", modifier = null),
+                                        ServerText(text = "8:31 AM", modifier = null)
+                                    )
+                                ),
+                                ServerText(
+                                    text = "9h 15m",
+                                    modifier = ServerModifier(paddingTop = 20f)
+                                ),
+                                ServerRow(
+                                    alignment = ServerAlignment.CENTER,
+                                    modifier = ServerModifier(paddingTop = 20f),
+                                    items = listOf(
+                                        ServerImage(
+                                            drawableRes = R.drawable.ic_android,
+                                            contentDescription = "Android",
+                                            modifier = ServerModifier(
+                                                width = 48f,
+                                                height = 48f
+                                            )
+                                        ),
+                                        ServerText(
+                                            text = "Average Sleep",
+                                            modifier = ServerModifier(paddingStart = 16f)
                                         )
-                                    ),
-                                    ServerText(
-                                        text = "Sleep",
-                                        modifier = ServerModifier(paddingStart = 7f)
-                                    ),
-                                    ServerSpacer(),
-                                    ServerText(text = "Nov 1 ", modifier = null),
-                                    ServerText(text = "8:31 AM", modifier = null)
-                                )
-                            ),
-                            ServerText(
-                                text = "9h 15m",
-                                modifier = ServerModifier(paddingTop = 20f)
-                            ),
-                            ServerRow(
-                                alignment = ServerAlignment.CENTER,
-                                modifier = ServerModifier(paddingTop = 20f),
-                                items = listOf(
-                                    ServerImage(
-                                        drawableRes = R.drawable.ic_android,
-                                        contentDescription = "Android",
-                                        modifier = ServerModifier(
-                                            width = 48f,
-                                            height = 48f
-                                        )
-                                    ),
-                                    ServerText(
-                                        text = "Average Sleep",
-                                        modifier = ServerModifier(paddingStart = 16f)
                                     )
                                 )
                             )
@@ -75,11 +79,11 @@ class MainActivity : ComponentActivity() {
                     )
                 )
             )
-        ))
+        )
         val moshi = Moshi.Builder().build()
         val jsonAdapter: JsonAdapter<ServerResponse> = moshi.adapter(ServerResponse::class.java)
 
-        Log.v("DavidData","DavidData"+jsonAdapter.toJson(items))
+        Log.v("DavidData", "DavidData" + jsonAdapter.toJson(items))
         setContent {
             ServerDrivenTheme() {
                 // A surface container using the 'background' color from the theme
