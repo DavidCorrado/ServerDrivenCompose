@@ -4,6 +4,7 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class ServerColumn(
+    val type: ServerItemType = ServerItemType.COLUMN,
     val modifier: ServerModifier?,
     val alignment: ServerAlignment?,
     val items: List<Any>

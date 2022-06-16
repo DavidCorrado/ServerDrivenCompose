@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                             paddingEnd = 20f,
                             paddingTop = 24f,
                             paddingBottom = 24f
-                        ), alignment = null, listOf(
+                        ), alignment = null, items = listOf(
                             ServerRow(
                                 modifier = null, alignment = ServerAlignment.CENTER, items = listOf(
                                     ServerImage(
@@ -41,16 +41,16 @@ class MainActivity : ComponentActivity() {
                                         )
                                     ),
                                     ServerText(
-                                        "Sleep",
+                                        text = "Sleep",
                                         modifier = ServerModifier(paddingStart = 7f)
                                     ),
-                                    ServerSpacer("type"),
-                                    ServerText("Nov 1 ", modifier = null),
-                                    ServerText("8:31 AM", modifier = null)
+                                    ServerSpacer(),
+                                    ServerText(text = "Nov 1 ", modifier = null),
+                                    ServerText(text = "8:31 AM", modifier = null)
                                 )
                             ),
                             ServerText(
-                                "9h 15m",
+                                text = "9h 15m",
                                 modifier = ServerModifier(paddingTop = 20f)
                             ),
                             ServerRow(
@@ -66,7 +66,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     ),
                                     ServerText(
-                                        "Average Sleep",
+                                        text = "Average Sleep",
                                         modifier = ServerModifier(paddingStart = 16f)
                                     )
                                 )
