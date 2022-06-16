@@ -1,12 +1,16 @@
 package com.davidcorrado.serverdriven.ui.sd.view
 
-import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import com.davidcorrado.serverdriven.ui.sd.data.ServerImage
 
 @Composable
-fun SDImage(@DrawableRes drawableRes: Int, contentDescription: String?, modifier: Modifier = Modifier){
-    Image(painter = painterResource(drawableRes), contentDescription = contentDescription,modifier = modifier)
+fun SDImage(serverImage: ServerImage) {
+    Image(
+        painter = painterResource(serverImage.drawableRes),
+        contentDescription = serverImage.contentDescription,
+        modifier = serverImage.modifier?.toModifier() ?: Modifier
+    )
 }
