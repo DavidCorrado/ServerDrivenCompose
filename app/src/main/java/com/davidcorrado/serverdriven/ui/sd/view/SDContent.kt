@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import com.davidcorrado.serverdriven.ui.sd.data.*
 
 @Composable
-fun SDContent(items: List<Any>, columnScope: ColumnScope? = null, rowScope: RowScope? = null) {
+fun SDContent(items: List<Any>, scope: Any? = null) {
     for (item in items) {
         when (item) {
             is ServerCard -> {
@@ -21,7 +21,7 @@ fun SDContent(items: List<Any>, columnScope: ColumnScope? = null, rowScope: RowS
                     modifier = item.modifier?.toModifier() ?: Modifier,
                     horizontalAlignment = if (item.alignment == ServerAlignment.CENTER) Alignment.CenterHorizontally else Alignment.Start
                 ) {
-                    SDContent(items = item.items, columnScope = this)
+                    SDContent(items = item.items, scope = this)
                 }
             }
             is ServerRow -> {
@@ -29,7 +29,7 @@ fun SDContent(items: List<Any>, columnScope: ColumnScope? = null, rowScope: RowS
                     modifier = item.modifier?.toModifier() ?: Modifier,
                     verticalAlignment = if (item.alignment == ServerAlignment.CENTER) Alignment.CenterVertically else Alignment.Top
                 ) {
-                    SDContent(items = item.items, rowScope = this)
+                    SDContent(items = item.items, scope = this)
                 }
             }
             is ServerImage -> {
@@ -46,10 +46,10 @@ fun SDContent(items: List<Any>, columnScope: ColumnScope? = null, rowScope: RowS
                 )
             }
             is ServerSpacer -> {
-                if(columnScope !=null) {
-                    return columnScope.SDSpacer()
-                } else if(rowScope != null){
-                    return rowScope.SDSpacer()
+                if(scope is ColumnScope) {
+                    scope.SDSpacer()
+                } else if(scope is RowScope){
+                    scope.SDSpacer()
                 }
             }
         }
