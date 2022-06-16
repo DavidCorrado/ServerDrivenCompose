@@ -10,7 +10,7 @@ import com.davidcorrado.serverdriven.ui.sd.data.ServerImage
 fun SDImage(serverImage: ServerImage) {
     Image(
         painter = painterResource(serverImage.drawableRes),
-        contentDescription = serverImage.contentDescription,
+        contentDescription = serverImage.adaText,
         modifier = serverImage.modifier?.toModifier() ?: Modifier
     )
 }

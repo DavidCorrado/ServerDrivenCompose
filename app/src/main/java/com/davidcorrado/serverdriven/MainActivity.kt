@@ -23,21 +23,20 @@ class MainActivity : ComponentActivity() {
         val items = ServerResponse(
             listOf(
                 ServerCard(
-                    modifier = null, items = listOf(
+                    items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(
                                 paddingStart = 20f,
                                 paddingEnd = 20f,
                                 paddingTop = 24f,
                                 paddingBottom = 24f
-                            ), alignment = null, items = listOf(
+                            ), items = listOf(
                                 ServerRow(
-                                    modifier = null,
                                     alignment = ServerAlignment.CENTER,
                                     items = listOf(
                                         ServerImage(
                                             drawableRes = R.drawable.ic_android,
-                                            contentDescription = "Android",
+                                            adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 40f,
                                                 height = 40f
@@ -48,8 +47,8 @@ class MainActivity : ComponentActivity() {
                                             modifier = ServerModifier(paddingStart = 7f)
                                         ),
                                         ServerSpacer(),
-                                        ServerText(text = "Nov 1 ", modifier = null),
-                                        ServerText(text = "8:31 AM", modifier = null)
+                                        ServerText(text = "Nov 1 "),
+                                        ServerText(text = "8:31 AM")
                                     )
                                 ),
                                 ServerText(
@@ -62,7 +61,7 @@ class MainActivity : ComponentActivity() {
                                     items = listOf(
                                         ServerImage(
                                             drawableRes = R.drawable.ic_android,
-                                            contentDescription = "Android",
+                                            adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 48f,
                                                 height = 48f

@@ -22,7 +22,7 @@ data class ServerText(
     val decoration: List<DecorationType>? = null,
     val weight: String? = null,
     val isHeading: Boolean? = null,
-    val modifier: ServerModifier?
+    val modifier: ServerModifier? = null
 ) {
     fun getTextStyle() =
         TextStyle(

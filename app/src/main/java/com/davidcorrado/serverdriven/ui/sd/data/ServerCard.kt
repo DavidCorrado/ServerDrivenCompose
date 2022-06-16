@@ -5,6 +5,6 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class ServerCard(
     val type: ServerItemType = ServerItemType.CARD,
-    val modifier: ServerModifier?,
+    val modifier: ServerModifier? = null,
     val items: List<Any>
 )
