@@ -6,6 +6,6 @@ import androidx.compose.ui.Modifier
 import com.davidcorrado.serverdriven.ui.sd.data.ServerCard
 
 @Composable
-fun SDCard(serverCard: ServerCard, content: @Composable () -> Unit){
-    Card(modifier = serverCard.modifier?.toModifier() ?: Modifier,content =content)
+fun SDCard(serverCard: ServerCard, content: @Composable () -> Unit) {
+    Card(modifier = serverCard.modifier?.toModifier() ?: Modifier, content = content)
 }

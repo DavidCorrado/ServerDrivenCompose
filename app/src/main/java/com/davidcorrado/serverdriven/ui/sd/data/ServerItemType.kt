@@ -6,5 +6,6 @@ enum class ServerItemType {
     CARD,
     ROW,
     COLUMN,
-    IMAGE
+    IMAGE,
+    BUBBLE
 }

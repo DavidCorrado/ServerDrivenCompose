@@ -17,7 +17,7 @@ data class ServerModifier(
     val paddingTop: Float? = null,
     val paddingBottom: Float? = null,
     val width: Float? = null,
-    val height: Float? = null
+    val height: Float? = null,
 ) {
     fun toModifier(): Modifier {
         return Modifier

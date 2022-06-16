@@ -30,6 +30,9 @@ fun SDContent(items: List<Any>, scope: Any? = null) {
             is ServerText -> {
                 SDText(serverText = item)
             }
+            is ServerBubble -> {
+                SDBubble(serverBubble = item)
+            }
             is ServerSpacer -> {
                 if (scope is ColumnScope) {
                     scope.SDSpacer()
