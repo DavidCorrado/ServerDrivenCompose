@@ -66,7 +66,18 @@ fun Entry(): ServerCard {
                                     paddingEnd = 8f
                                 )
                             ),
-                            ServerBubble(text = ServerText(text = "Normal")),
+                            ServerBubble(
+                                backgroundColor = "#70DEB0",
+                                text = ServerText(
+                                    text = "NORMAL",
+                                    color = "#094E44",
+                                    weight = "700",
+                                    size = 12
+                                ),
+                                modifier = ServerModifier(
+                                    paddingEnd = 8f
+                                )
+                            ),
                             ServerText(text = "Per AHA guidelines", size = 12, weight = "500"),
                         )
                     ),
