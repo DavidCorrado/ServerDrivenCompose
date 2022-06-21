@@ -1,7 +1,6 @@
 package com.davidcorrado.serverdriven
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
@@ -12,8 +11,6 @@ import androidx.compose.ui.unit.dp
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 import com.davidcorrado.serverdriven.ui.theme.ServerDrivenTheme
-import com.squareup.moshi.JsonAdapter
-import com.squareup.moshi.Moshi
 
 
 class MainActivity : ComponentActivity() {
@@ -34,7 +31,7 @@ class MainActivity : ComponentActivity() {
                                     alignment = ServerAlignment.CENTER,
                                     items = listOf(
                                         ServerImage(
-                                            drawableRes = R.drawable.ic_image,
+                                            drawableRes = R.drawable.ic_streak,
                                             adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 40f,
@@ -59,7 +56,7 @@ class MainActivity : ComponentActivity() {
                                     modifier = ServerModifier(paddingTop = 20f),
                                     items = listOf(
                                         ServerImage(
-                                            drawableRes = R.drawable.ic_image,
+                                            drawableRes = R.drawable.ic_streak,
                                             adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 48f,
@@ -82,10 +79,8 @@ class MainActivity : ComponentActivity() {
                 )
             )
         )
-        val moshi = Moshi.Builder().build()
-        val jsonAdapter: JsonAdapter<ServerResponse> = moshi.adapter(ServerResponse::class.java)
 
-        Log.v("DavidData", "DavidData" + jsonAdapter.toJson(items))
+
         setContent {
             ServerDrivenTheme() {
                 // A surface container using the 'background' color from the theme

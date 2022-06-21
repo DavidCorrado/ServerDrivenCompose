@@ -8,11 +8,11 @@ import androidx.compose.ui.semantics.semantics
 import com.davidcorrado.serverdriven.ui.sd.data.ServerText
 
 @Composable
-fun SDText(serverText: ServerText) {
+fun SDText(serverText: ServerText, scope: Any?) {
     Text(
         style = serverText.getTextStyle(),
         text = serverText.text,
-        modifier = (serverText.modifier?.toModifier()
+        modifier = (serverText.modifier?.toModifier(scope)
             ?: Modifier).semantics { if (serverText.isHeading()) heading() }
     )
 }

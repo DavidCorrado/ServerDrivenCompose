@@ -29,7 +29,7 @@ data class ServerText(
             fontWeight = FontWeight(weight?.toInt() ?: DEFAULT_WEIGHT.toInt()),
             fontSize = (size ?: DEFAULT_SIZE).sp,
             fontStyle = style?.fontStyle ?: FontType.NORMAL.fontStyle,
-            color = color?.toColor() ?: Color.Black,
+            color = (color?:"#4C5870").toColor(),
             textDecoration = decoration?.let { decoration -> TextDecoration.combine(decoration.map { it.textDecoration }) }
         )
 

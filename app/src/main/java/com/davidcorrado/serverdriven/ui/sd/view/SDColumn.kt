@@ -1,6 +1,7 @@
 package com.davidcorrado.serverdriven.ui.sd.view
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -14,15 +15,20 @@ import com.davidcorrado.serverdriven.ui.sd.data.ServerAlignment
 import com.davidcorrado.serverdriven.ui.sd.data.ServerColumn
 
 @Composable
-fun SDColumn(serverColumn: ServerColumn, content: @Composable ColumnScope.() -> Unit) {
+fun SDColumn(
+    serverColumn: ServerColumn,
+    scope: Any?,
+    content: @Composable ColumnScope.() -> Unit
+) {
     Column(
-        modifier = (serverColumn.modifier?.toModifier()
+        modifier = (serverColumn.modifier?.toModifier(scope)
             ?: Modifier).background(
             serverColumn.color?.toColor() ?: Color.Transparent, shape = RoundedCornerShape(
                 Dp(serverColumn.colorCornerRadius ?: 0f)
             )
         ),
         content = content,
-        horizontalAlignment = if (serverColumn.alignment == ServerAlignment.CENTER) Alignment.CenterHorizontally else Alignment.Start
+        horizontalAlignment = if (serverColumn.alignment == ServerAlignment.CENTER) Alignment.CenterHorizontally else Alignment.Start,
+        verticalArrangement = if (serverColumn.spacing != null) Arrangement.spacedBy(Dp(serverColumn.spacing)) else Arrangement.Top
     )
 }

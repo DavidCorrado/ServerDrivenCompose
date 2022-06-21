@@ -7,10 +7,10 @@ import androidx.compose.ui.res.painterResource
 import com.davidcorrado.serverdriven.ui.sd.data.ServerImage
 
 @Composable
-fun SDImage(serverImage: ServerImage) {
+fun SDImage(serverImage: ServerImage, scope: Any?) {
     Image(
         painter = painterResource(serverImage.drawableRes),
         contentDescription = serverImage.adaText,
-        modifier = serverImage.modifier?.toModifier() ?: Modifier
+        modifier = serverImage.modifier?.toModifier(scope) ?: Modifier
     )
 }

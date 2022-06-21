@@ -1,7 +1,6 @@
 package com.davidcorrado.serverdriven.ui.sd.view
 
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.RowScope
+import android.util.Log
 import androidx.compose.runtime.Composable
 import com.davidcorrado.serverdriven.ui.sd.data.*
 
@@ -10,35 +9,34 @@ fun SDContent(items: List<Any>, scope: Any? = null) {
     for (item in items) {
         when (item) {
             is ServerCard -> {
-                SDCard(item) {
-                    SDContent(items = item.items)
+                SDCard(item, scope) {
+                    SDContent(items = item.items, scope = scope)
                 }
             }
             is ServerColumn -> {
-                SDColumn(item) {
+                SDColumn(item, scope) {
                     SDContent(items = item.items, scope = this)
                 }
             }
             is ServerRow -> {
-                SDRow(item) {
+                SDRow(item, scope) {
                     SDContent(items = item.items, scope = this)
                 }
             }
             is ServerImage -> {
-                SDImage(serverImage = item)
+                SDImage(serverImage = item, scope = scope)
             }
             is ServerText -> {
-                SDText(serverText = item)
+                SDText(serverText = item, scope = scope)
             }
             is ServerBubble -> {
-                SDBubble(serverBubble = item)
+                SDBubble(serverBubble = item, scope = scope)
             }
             is ServerSpacer -> {
-                if (scope is ColumnScope) {
-                    scope.SDSpacer()
-                } else if (scope is RowScope) {
-                    scope.SDSpacer()
-                }
+                SDSpacer(scope = scope)
+            }
+            else -> {
+                Log.e("DavidData", "DavidError$item")
             }
         }
     }

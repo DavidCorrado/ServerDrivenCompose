@@ -8,11 +8,11 @@ import com.davidcorrado.serverdriven.ui.sd.data.ServerBubble
 import com.davidcorrado.serverdriven.ui.view.AppBubble
 
 @Composable
-fun SDBubble(serverBubble: ServerBubble) {
+fun SDBubble(serverBubble: ServerBubble, scope: Any?) {
     AppBubble(
         drawableRes = serverBubble.drawableRes,
         text = serverBubble.text.text,
-        modifier = (serverBubble.modifier?.toModifier() ?: Modifier).semantics {
+        modifier = (serverBubble.modifier?.toModifier(scope) ?: Modifier).semantics {
             contentDescription = serverBubble.getTextAda()
         },
         backgroundColor = serverBubble.getBackgroundColor(),
