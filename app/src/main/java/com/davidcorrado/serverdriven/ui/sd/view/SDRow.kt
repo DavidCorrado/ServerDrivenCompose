@@ -18,7 +18,7 @@ fun SDRow(
 ) {
     Row(
         modifier = (serverRow.modifier?.toModifier(scope) ?: Modifier),
-        verticalAlignment = if (serverRow.alignment == ServerAlignment.CENTER) Alignment.CenterVertically else Alignment.Top,
+        verticalAlignment = if (serverRow.alignment == ServerAlignment.CENTER) Alignment.CenterVertically else if (serverRow.alignment == ServerAlignment.END) Alignment.Bottom else Alignment.Top,
         horizontalArrangement = if (serverRow.spacing != null) Arrangement.spacedBy(Dp(serverRow.spacing)) else Arrangement.Start,
         content = content
     )
