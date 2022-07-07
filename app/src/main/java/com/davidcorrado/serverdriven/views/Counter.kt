@@ -47,9 +47,9 @@ fun Counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
                     ServerSpacer(),
                     ServerImage(
                         drawableRes = image,
+                        width = 33f,
+                        height = 33f,
                         modifier = ServerModifier(
-                            width = 33f,
-                            height = 33f,
                             paddingStart = 8f
                         )
                     )

@@ -36,9 +36,9 @@ fun Entry(): ServerCard {
                         items = listOf(
                             ServerImage(
                                 drawableRes = R.drawable.ic_bp,
+                                width = 18f,
+                                height = 18f,
                                 modifier = ServerModifier(
-                                    width = 18f,
-                                    height = 18f,
                                     paddingEnd = 7f
                                 )
                             ),
@@ -60,9 +60,9 @@ fun Entry(): ServerCard {
                         items = listOf(
                             ServerImage(
                                 drawableRes = R.drawable.ic_running,
+                                width = 20f,
+                                height = 20f,
                                 modifier = ServerModifier(
-                                    width = 20f,
-                                    height = 20f,
                                     paddingEnd = 8f
                                 )
                             ),

@@ -55,9 +55,9 @@ fun history1(): ServerColumn {
                                 items = listOf(
                                     ServerImage(
                                         drawableRes = R.drawable.ic_running,
+                                        width = 14f,
+                                        height = 14f,
                                         modifier = ServerModifier(
-                                            width = 14f,
-                                            height = 14f,
                                             paddingEnd = 8f,
                                         ),
                                     ),
@@ -86,10 +86,10 @@ fun history1(): ServerColumn {
                     ),
                     ServerImage(
                         drawableRes = R.drawable.ic_chevron,
+                        width = 5f,
+                        height = 11f,
                         modifier = ServerModifier(
                             paddingStart = 36f,
-                            width = 5f,
-                            height = 11f,
                         ),
                     ),
                 ),
@@ -118,9 +118,9 @@ fun history2(): ServerColumn {
                                 items = listOf(
                                     ServerImage(
                                         drawableRes = R.drawable.ic_disappointed,
+                                        width = 24f,
+                                        height = 22f,
                                         modifier = ServerModifier(
-                                            width = 24f,
-                                            height = 22f,
                                             paddingEnd = 10f,
                                         ),
                                     ),
@@ -142,10 +142,10 @@ fun history2(): ServerColumn {
                     ),
                     ServerImage(
                         drawableRes = R.drawable.ic_chevron,
+                        width = 5f,
+                        height = 11f,
                         modifier = ServerModifier(
                             paddingStart = 36f,
-                            width = 5f,
-                            height = 11f,
                         ),
                     ),
                 ),

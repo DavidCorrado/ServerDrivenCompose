@@ -33,10 +33,8 @@ class MainActivity : ComponentActivity() {
                                         ServerImage(
                                             drawableRes = R.drawable.ic_streak,
                                             adaText = "Android",
-                                            modifier = ServerModifier(
-                                                width = 40f,
-                                                height = 40f
-                                            )
+                                            width = 40f,
+                                            height = 40f
                                         ),
                                         ServerText(
                                             text = "Sleep",
@@ -58,10 +56,8 @@ class MainActivity : ComponentActivity() {
                                         ServerImage(
                                             drawableRes = R.drawable.ic_streak,
                                             adaText = "Android",
-                                            modifier = ServerModifier(
-                                                width = 48f,
-                                                height = 48f
-                                            )
+                                            width = 48f,
+                                            height = 48f
                                         ),
                                         ServerText(
                                             text = "Average Sleep",
