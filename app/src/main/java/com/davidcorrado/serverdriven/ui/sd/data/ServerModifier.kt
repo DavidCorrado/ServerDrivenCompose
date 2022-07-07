@@ -25,8 +25,7 @@ data class ServerModifier(
             .modifyIf(paddingEnd != null) { padding(end = Dp(paddingEnd!!)) }
             .modifyIf(paddingTop != null) { padding(top = Dp(paddingTop!!)) }
             .modifyIf(paddingBottom != null) { padding(bottom = Dp(paddingBottom!!)) }
-            .modifyIf(width != null) { width(Dp(width!!)) }
-            .modifyIf(height != null) { height(Dp(height!!)) }
+            .modifyIf(width != null && height != null) { width(Dp(width!!)).height(Dp(height!!)) }
             .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
     }
 }
