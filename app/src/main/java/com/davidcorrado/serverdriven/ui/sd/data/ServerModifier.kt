@@ -15,6 +15,8 @@ data class ServerModifier(
     val paddingEnd: Float? = null,
     val paddingTop: Float? = null,
     val paddingBottom: Float? = null,
+    val width: Float? = null,
+    val height: Float? = null,
     val weight: Float? = null
 ) {
     fun toModifier(scope: Any?): Modifier {
@@ -23,6 +25,8 @@ data class ServerModifier(
             .modifyIf(paddingEnd != null) { padding(end = Dp(paddingEnd!!)) }
             .modifyIf(paddingTop != null) { padding(top = Dp(paddingTop!!)) }
             .modifyIf(paddingBottom != null) { padding(bottom = Dp(paddingBottom!!)) }
+            .modifyIf(width != null) { width(Dp(width!!)) }
+            .modifyIf(height != null) { height(Dp(height!!)) }
             .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
     }
 }
