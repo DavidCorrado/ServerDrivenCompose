@@ -36,7 +36,7 @@ fun history1(): ServerColumn {
                 items = listOf(
                     ServerColumn(
                         modifier = ServerModifier(
-                            weight = 1f,
+                            weight = 1f,//TODO
                         ),
                         items = listOf(
                             ServerRow(
@@ -110,7 +110,7 @@ fun history2(): ServerColumn {
                     ServerRow(
                         alignment = ServerAlignment.CENTER,
                         modifier = ServerModifier(
-                            weight = 1f,
+                            weight = 1f,//TODO
                         ),
                         items = listOf(
                             ServerRow(

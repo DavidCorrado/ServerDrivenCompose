@@ -5,8 +5,7 @@ import androidx.compose.runtime.Composable
 import com.davidcorrado.serverdriven.ui.sd.data.*
 
 @Composable
-fun SDContent(items: List<Any>, scope: Any? = null) {
-    for (item in items) {
+fun SDContent(item: Any?, scope: Any? = null) {
         when (item) {
             is ServerCard -> {
                 SDCard(item, scope) {
@@ -39,5 +38,11 @@ fun SDContent(items: List<Any>, scope: Any? = null) {
                 Log.e("DavidData", "DavidError$item")
             }
         }
+}
+
+@Composable
+fun SDContent(items: List<Any>, scope: Any? = null) {
+    for (item in items) {
+        SDContent(item = item, scope = scope)
     }
 }
