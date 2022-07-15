@@ -9,7 +9,7 @@ import com.davidcorrado.serverdriven.ui.sd.data.ServerCard
 @Composable
 fun SDCard(serverCard: ServerCard, scope: Any?, content: @Composable () -> Unit) {
     Card(modifier = serverCard.modifier?.toModifier(scope) ?: Modifier) {
-        Column {
+        Column {//Added column to make the same between platforms
             content.invoke()
         }
     }
