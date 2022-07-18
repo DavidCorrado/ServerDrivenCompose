@@ -1,11 +1,13 @@
 package com.davidcorrado.serverdriven.ui.sd.data
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import com.davidcorrado.serverdriven.extension.modifyIf
+import com.davidcorrado.serverdriven.extension.toColor
 import com.davidcorrado.serverdriven.extension.weightWithScope
 import com.squareup.moshi.JsonClass
 
@@ -17,7 +19,8 @@ data class ServerModifier(
     val paddingBottom: Float? = null,
     val width: Float? = null,
     val height: Float? = null,
-    val weight: Float? = null
+    val weight: Float? = null,
+    val backgroundColor: String? = null
 ) {
     fun toModifier(scope: Any?): Modifier {
         return Modifier
@@ -27,5 +30,6 @@ data class ServerModifier(
             .modifyIf(paddingBottom != null) { padding(bottom = Dp(paddingBottom!!)) }
             .modifyIf(width != null && height != null) { width(Dp(width!!)).height(Dp(height!!)) }
             .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
+            .modifyIf(backgroundColor != null) { background(backgroundColor!!.toColor()) }
     }
 }

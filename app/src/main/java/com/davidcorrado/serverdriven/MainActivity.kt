@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                                 paddingBottom = 24f
                             ), items = listOf(
                                 ServerRow(
-                                    alignment = ServerAlignment.CENTER,
+                                    alignment = ServerAlignment.TOP_CENTER,
                                     items = listOf(
                                         ServerImage(
                                             drawableRes = R.drawable.ic_streak,
@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
                                     modifier = ServerModifier(paddingTop = 20f)
                                 ),
                                 ServerRow(
-                                    alignment = ServerAlignment.CENTER,
+                                    alignment = ServerAlignment.TOP_CENTER,
                                     modifier = ServerModifier(paddingTop = 20f),
                                     items = listOf(
                                         ServerImage(

@@ -32,7 +32,7 @@ fun history1(): ServerColumn {
         ),
         items = listOf(
             ServerRow(
-                alignment = ServerAlignment.CENTER,
+                alignment = ServerAlignment.TOP_CENTER,
                 items = listOf(
                     ServerColumn(
                         modifier = ServerModifier(
@@ -40,7 +40,7 @@ fun history1(): ServerColumn {
                         ),
                         items = listOf(
                             ServerRow(
-                                alignment = ServerAlignment.CENTER,
+                                alignment = ServerAlignment.TOP_CENTER,
                                 items = listOf(
                                     ServerText(text = "45m", size = 18, weight = "500"),
                                     ServerSpacer(),
@@ -51,7 +51,7 @@ fun history1(): ServerColumn {
                                 modifier = ServerModifier(
                                     paddingTop = 4f,
                                 ),
-                                alignment = ServerAlignment.CENTER,
+                                alignment = ServerAlignment.TOP_CENTER,
                                 items = listOf(
                                     ServerImage(
                                         drawableRes = R.drawable.ic_running,
@@ -105,16 +105,16 @@ fun history2(): ServerColumn {
         ),
         items = listOf(
             ServerRow(
-                alignment = ServerAlignment.CENTER,
+                alignment = ServerAlignment.TOP_CENTER,
                 items = listOf(
                     ServerRow(
-                        alignment = ServerAlignment.CENTER,
+                        alignment = ServerAlignment.TOP_CENTER,
                         modifier = ServerModifier(
                             weight = 1f,//TODO
                         ),
                         items = listOf(
                             ServerRow(
-                                alignment = ServerAlignment.CENTER,
+                                alignment = ServerAlignment.TOP_CENTER,
                                 items = listOf(
                                     ServerImage(
                                         drawableRes = R.drawable.ic_disappointed,
@@ -132,7 +132,7 @@ fun history2(): ServerColumn {
                             ),
                             ServerSpacer(),
                             ServerColumn(
-                                alignment = ServerAlignment.END,
+                                alignment = ServerAlignment.TOP_END,
                                 items = listOf(
                                     ServerText(text = "Nov 1", size = 12, weight = "500", modifier = ServerModifier(paddingBottom = 8f)),
                                     ServerText(text = "10:45 AM", size = 12, weight = "700"),
