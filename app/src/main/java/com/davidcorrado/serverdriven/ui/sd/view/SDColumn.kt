@@ -21,12 +21,8 @@ fun SDColumn(
     content: @Composable ColumnScope.() -> Unit
 ) {
     Column(
-        modifier = (serverColumn.modifier?.toModifier(scope)
-            ?: Modifier).background(
-            serverColumn.color?.toColor() ?: Color.Transparent, shape = RoundedCornerShape(
-                Dp(serverColumn.colorCornerRadius ?: 0f)
-            )
-        ),
+        modifier = serverColumn.modifier?.toModifier(scope)
+            ?: Modifier,
         content = content,
         horizontalAlignment = if (serverColumn.alignment == ServerAlignment.CENTER) Alignment.CenterHorizontally else if (serverColumn.alignment == ServerAlignment.END) Alignment.End else Alignment.Start,
         verticalArrangement = if (serverColumn.spacing != null) Arrangement.spacedBy(Dp(serverColumn.spacing)) else Arrangement.Top

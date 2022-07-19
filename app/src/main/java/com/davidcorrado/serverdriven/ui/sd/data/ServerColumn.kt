@@ -8,7 +8,5 @@ data class ServerColumn(
     val spacing: Float? = null,
     val modifier: ServerModifier? = null,
     val alignment: ServerAlignment? = null,
-    val color: String? = null,
-    val colorCornerRadius: Float? = null,
     val items: List<Any>
 )

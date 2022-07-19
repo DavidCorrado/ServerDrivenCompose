@@ -11,8 +11,8 @@ import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 @Preview("Counters")
 @Composable
 fun Counters() {
-    val leftCounter = Counter(27, "Active streak", R.drawable.ic_streak)
-    val rightCounter = Counter(451, "Total entries", R.drawable.ic_total_entries)
+    val leftCounter = counter(27, "Active streak", R.drawable.ic_streak)
+    val rightCounter = counter(451, "Total entries", R.drawable.ic_total_entries)
     val data =
         ServerResponse(
             items = listOf(
@@ -26,10 +26,9 @@ fun Counters() {
     SDContent(items = data.items)
 }
 
-fun Counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
+fun counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
     return ServerColumn(
-        color = "#F5F5F5", colorCornerRadius = 16f,
-        modifier = ServerModifier(weight = 1f), items = listOf(//TODO
+        modifier = ServerModifier(weight = 1f, backgroundColor = "#F5F5F5", cornerRadius = 16f), items = listOf(//TODO
             ServerText(
                 text = count.toString(),
                 color = "#002F8C",

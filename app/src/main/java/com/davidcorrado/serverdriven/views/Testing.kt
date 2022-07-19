@@ -50,7 +50,7 @@ fun TestingPreview() {
                         ServerColumn(
                             items = listOf(
                                 ServerText(text = "Card Padding HW"),
-                                ServerText(text = "Card2")
+                                ServerText(text = "Card 2")
                             )
                         )
                     ),
