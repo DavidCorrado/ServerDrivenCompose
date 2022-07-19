@@ -36,8 +36,19 @@ data class ServerModifier(
             .modifyIf(paddingBottom != null) { padding(bottom = Dp(paddingBottom!!)) }
             .modifyIf(width != null && height != null) { width(Dp(width!!)).height(Dp(height!!)) }
             .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
-            .modifyIf(backgroundColor != null) { background(backgroundColor!!.toColor(), RoundedCornerShape(Dp(cornerRadius!!))) }
-            .modifyIf(borderColor != null) { border(Dp(borderSize!!),borderColor!!.toColor(), RoundedCornerShape(Dp(cornerRadius!!))) }
+            .modifyIf(backgroundColor != null) {
+                background(
+                    backgroundColor!!.toColor(),
+                    RoundedCornerShape(Dp(cornerRadius!!))
+                )
+            }
+            .modifyIf(borderColor != null) {
+                border(
+                    Dp(borderSize ?: 1f),
+                    borderColor!!.toColor(),
+                    RoundedCornerShape(Dp(cornerRadius!!))
+                )
+            }
             .modifyIf(cornerRadius != null) { clip(RoundedCornerShape(Dp(cornerRadius!!))) }
     }
 }

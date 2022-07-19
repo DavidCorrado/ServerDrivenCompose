@@ -2,6 +2,7 @@ package com.davidcorrado.serverdriven.views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -70,7 +71,9 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(
                         width = 200f,
-                        height = 200f
+                        height = 200f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerColumn(
@@ -80,7 +83,9 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(
                         width = 200f,
-                        height = 200f
+                        height = 200f,
+                        backgroundColor = "#00ff00",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerRow(
@@ -90,7 +95,9 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(
                         width = 200f,
-                        height = 200f
+                        height = 200f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerRow(
@@ -100,7 +107,9 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(
                         width = 200f,
-                        height = 200f
+                        height = 200f,
+                        backgroundColor = "#00ff00",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerRow(
@@ -115,7 +124,9 @@ fun TestingPreview() {
                         paddingStart = 30f,
                         paddingEnd = 30f,
                         paddingTop = 30f,
-                        paddingBottom = 30f
+                        paddingBottom = 30f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerColumn(
@@ -130,7 +141,9 @@ fun TestingPreview() {
                         paddingStart = 30f,
                         paddingEnd = 30f,
                         paddingTop = 30f,
-                        paddingBottom = 30f
+                        paddingBottom = 30f,
+                        backgroundColor = "#00ff00",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerRow(
@@ -145,7 +158,9 @@ fun TestingPreview() {
                                 paddingStart = 30f,
                                 paddingEnd = 30f,
                                 paddingTop = 30f,
-                                paddingBottom = 30f
+                                paddingBottom = 30f,
+                                backgroundColor = "#00ff00",
+                                cornerRadius = 5f
                             )
                         )
                     ),
@@ -153,7 +168,9 @@ fun TestingPreview() {
                         paddingStart = 30f,
                         paddingEnd = 30f,
                         paddingTop = 30f,
-                        paddingBottom = 30f
+                        paddingBottom = 30f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerColumn(
@@ -164,7 +181,9 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(
                         width = 200f,
-                        height = 200f
+                        height = 200f,
+                        backgroundColor = "#00ff00",
+                        cornerRadius = 5f
                     )
                 ),
                 ServerRow(
@@ -175,12 +194,27 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(
                         width = 200f,
-                        height = 200f
+                        height = 200f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 5f
+                    )
+                ),
+                ServerRow(
+                    items = listOf(
+                        ServerText(text = "Row Border Background"),
+                    ),
+                    modifier = ServerModifier(
+                        width = 200f,
+                        height = 200f,
+                        backgroundColor = "#ff0000",
+                        borderSize = 2f,
+                        borderColor = "#0000ff",
+                        cornerRadius = 5f
                     )
                 ),
             )
         )
-    LazyColumn {
+    LazyColumn(modifier = Modifier.fillMaxWidth()) {
         items(data.items) { item ->
             SDContent(item = item, this)
         }
