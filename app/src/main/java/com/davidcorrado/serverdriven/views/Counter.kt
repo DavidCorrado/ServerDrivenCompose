@@ -38,7 +38,7 @@ fun Counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
                 modifier = ServerModifier(paddingStart = 18f, paddingTop = 18f)
             ),
             ServerRow(
-                alignment = ServerAlignment.TOP_CENTER, items = listOf(
+                alignment = ServerAlignment.CENTER, items = listOf(
                     ServerText(
                         text = label,
                         size = 12,

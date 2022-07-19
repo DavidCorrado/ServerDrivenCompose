@@ -5,13 +5,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Card
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 
@@ -19,13 +19,10 @@ import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 @Composable
 fun Testing2Preview() {
     Column {
-        Card(
-            modifier = Modifier
-                .size(Dp(200f), Dp(200f))
-                .background(Color.Green)
-        ) {
-            Text("Test", modifier = Modifier.background(Color.Red))
-            Text("Test", modifier = Modifier.background(Color.Red))
+        Surface(modifier = Modifier
+            .size(200.dp, 200.dp)
+            .background(Color.Blue)) {
+            Text("test", modifier = Modifier.background(Color.Red))
         }
     }
 }
@@ -67,9 +64,9 @@ fun TestingPreview() {
                     )
                 ),
                 ServerColumn(
-                    alignment = ServerAlignment.TOP_START,
+                    alignment =  ServerAlignment.CENTER,
                     items = listOf(
-                        ServerText(text = "Column Top Start"),
+                        ServerText(text = "Column Center"),
                     ),
                     modifier = ServerModifier(
                         width = 200f,
@@ -77,79 +74,9 @@ fun TestingPreview() {
                     )
                 ),
                 ServerColumn(
-                    alignment = ServerAlignment.TOP_CENTER,
+                    alignment =  ServerAlignment.END,
                     items = listOf(
-                        ServerText(text = "Column Top Center"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerColumn(
-                    alignment = ServerAlignment.TOP_END,
-                    items = listOf(
-                        ServerText(text = "Column Top End"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerColumn(
-                    alignment = ServerAlignment.CENTER_START,
-                    items = listOf(
-                        ServerText(text = "Column Center Start"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerColumn(
-                    alignment = ServerAlignment.CENTER_CENTER,
-                    items = listOf(
-                        ServerText(text = "Column Center Center"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerColumn(
-                    alignment = ServerAlignment.CENTER_END,
-                    items = listOf(
-                        ServerText(text = "Column Center End"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerColumn(
-                    alignment = ServerAlignment.BOTTOM_START,
-                    items = listOf(
-                        ServerText(text = "Column Bottom Start"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerColumn(
-                    alignment = ServerAlignment.BOTTOM_CENTER,
-                    items = listOf(
-                        ServerText(text = "Column Bottom Center"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerColumn(
-                    alignment = ServerAlignment.BOTTOM_END,
-                    items = listOf(
-                        ServerText(text = "Column Bottom End"),
+                        ServerText(text = "Column End"),
                     ),
                     modifier = ServerModifier(
                         width = 200f,
@@ -157,9 +84,9 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    alignment = ServerAlignment.TOP_START,
+                    alignment =  ServerAlignment.CENTER,
                     items = listOf(
-                        ServerText(text = "Row Top Start"),
+                        ServerText(text = "Row Center"),
                     ),
                     modifier = ServerModifier(
                         width = 200f,
@@ -167,79 +94,9 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    alignment = ServerAlignment.TOP_CENTER,
+                    alignment =  ServerAlignment.END,
                     items = listOf(
-                        ServerText(text = "Row Top Center"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerRow(
-                    alignment = ServerAlignment.TOP_END,
-                    items = listOf(
-                        ServerText(text = "Row Top End"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerRow(
-                    alignment = ServerAlignment.CENTER_START,
-                    items = listOf(
-                        ServerText(text = "Row Center Start"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerRow(
-                    alignment = ServerAlignment.CENTER_CENTER,
-                    items = listOf(
-                        ServerText(text = "Row Top Center"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerRow(
-                    alignment = ServerAlignment.CENTER_END,
-                    items = listOf(
-                        ServerText(text = "Row Center End"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerRow(
-                    alignment = ServerAlignment.BOTTOM_START,
-                    items = listOf(
-                        ServerText(text = "Row Bottom Center"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerRow(
-                    alignment = ServerAlignment.BOTTOM_CENTER,
-                    items = listOf(
-                        ServerText(text = "Row Bottom Center"),
-                    ),
-                    modifier = ServerModifier(
-                        width = 200f,
-                        height = 200f
-                    )
-                ),
-                ServerRow(
-                    alignment = ServerAlignment.BOTTOM_END,
-                    items = listOf(
-                        ServerText(text = "Row Bottom End"),
+                        ServerText(text = "Row End"),
                     ),
                     modifier = ServerModifier(
                         width = 200f,
@@ -248,8 +105,8 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     items = listOf(
-                        ServerText(text = "Row Padding HW"),
-                        ServerText(text = "Row 2")
+                                ServerText(text = "Row Padding HW"),
+                                ServerText(text = "Row 2")
                     ),
                     spacing = 20f,
                     modifier = ServerModifier(
@@ -263,8 +120,8 @@ fun TestingPreview() {
                 ),
                 ServerColumn(
                     items = listOf(
-                        ServerText(text = "Col Padding HW"),
-                        ServerText(text = "Col 2")
+                                ServerText(text = "Col Padding HW"),
+                                ServerText(text = "Col 2")
                     ),
                     spacing = 20f,
                     modifier = ServerModifier(

@@ -32,7 +32,7 @@ fun Entry(): ServerCard {
                 ),
                 items = listOf(
                     ServerRow(
-                        alignment = ServerAlignment.TOP_CENTER,
+                        alignment = ServerAlignment.CENTER,
                         items = listOf(
                             ServerImage(
                                 drawableRes = R.drawable.ic_bp,
@@ -56,7 +56,7 @@ fun Entry(): ServerCard {
                         modifier = ServerModifier(paddingTop = 21f, paddingBottom = 15f)
                     ),
                     ServerRow(
-                        alignment = ServerAlignment.TOP_CENTER,
+                        alignment = ServerAlignment.CENTER,
                         items = listOf(
                             ServerImage(
                                 drawableRes = R.drawable.ic_running,

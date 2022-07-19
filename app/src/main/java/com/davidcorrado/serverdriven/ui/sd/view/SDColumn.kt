@@ -20,28 +20,6 @@ fun SDColumn(
     scope: Any?,
     content: @Composable ColumnScope.() -> Unit
 ) {
-    val horizontalAlignment = when (serverColumn.alignment) {
-        ServerAlignment.TOP_CENTER, ServerAlignment.CENTER_CENTER, ServerAlignment.BOTTOM_CENTER -> {
-            Alignment.CenterHorizontally
-        }
-        ServerAlignment.TOP_END, ServerAlignment.CENTER_END, ServerAlignment.BOTTOM_END -> {
-            Alignment.End
-        }
-        else -> {
-            Alignment.Start
-        }
-    }
-    val verticalAlignment = when (serverColumn.alignment) {
-        ServerAlignment.CENTER_START, ServerAlignment.CENTER_CENTER, ServerAlignment.CENTER_END -> {
-            Alignment.CenterVertically
-        }
-        ServerAlignment.BOTTOM_START, ServerAlignment.BOTTOM_CENTER, ServerAlignment.BOTTOM_END -> {
-            Alignment.Bottom
-        }
-        else -> {
-            Alignment.Top
-        }
-    }
     Column(
         modifier = (serverColumn.modifier?.toModifier(scope)
             ?: Modifier).background(
@@ -50,10 +28,7 @@ fun SDColumn(
             )
         ),
         content = content,
-        horizontalAlignment = horizontalAlignment,
-        verticalArrangement = Arrangement.spacedBy(
-            Dp(serverColumn.spacing ?: 0f),
-            verticalAlignment
-        )
+        horizontalAlignment = if (serverColumn.alignment == ServerAlignment.CENTER) Alignment.CenterHorizontally else if (serverColumn.alignment == ServerAlignment.END) Alignment.End else Alignment.Start,
+        verticalArrangement = if (serverColumn.spacing != null) Arrangement.spacedBy(Dp(serverColumn.spacing)) else Arrangement.Top
     )
 }
