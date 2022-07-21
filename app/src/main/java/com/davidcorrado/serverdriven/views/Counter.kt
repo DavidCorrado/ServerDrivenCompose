@@ -28,7 +28,7 @@ fun Counters() {
 
 fun counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
     return ServerColumn(
-        modifier = ServerModifier(weight = 1f, backgroundColor = "#F5F5F5", cornerRadius = 16f), items = listOf(//TODO
+        modifier = ServerModifier(weight = 1f, backgroundColor = "#F5F5F5", cornerRadius = 16f), items = listOf(
             ServerText(
                 text = count.toString(),
                 color = "#002F8C",
