@@ -25,7 +25,7 @@ data class ServerModifier(
 ) {
     fun toModifier(scope: Any?): Modifier {
         return Modifier
-            .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
+            .weightWithScope(scope, weight)
             .modifyIf(width != null) { width(Dp(width!!+(paddingStart ?:0f) + (paddingEnd ?: 0f))) }
             .modifyIf(height != null) { height(Dp(height!!+(paddingTop?:0f) + (paddingBottom ?: 0f))) }
             .modifyIf(backgroundColor != null) {
