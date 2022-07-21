@@ -335,6 +335,36 @@ fun TestingPreview() {
                         )
                     )
                 ),
+                ServerRow(
+                    items = listOf(
+                        ServerRow(
+                            modifier = ServerModifier(width = 200f),
+                            items = listOf(
+                                ServerText(
+                                    text = "Left 30",
+                                    modifier = ServerModifier(
+                                        weight = .3f,
+                                        backgroundColor = "#ff0000"
+                                    )
+                                ),
+                                ServerText(
+                                    text = "Mid 50",
+                                    modifier = ServerModifier(
+                                        weight = .5f,
+                                        backgroundColor = "#00ff00"
+                                    )
+                                ),
+                                ServerText(
+                                    text = "Right 30",
+                                    modifier = ServerModifier(
+                                        weight = .3f,
+                                        backgroundColor = "#0000ff"
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
                 ServerCard(
                     items = listOf(
                         ServerText(
