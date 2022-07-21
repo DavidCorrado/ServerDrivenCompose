@@ -26,8 +26,8 @@ data class ServerModifier(
     fun toModifier(scope: Any?): Modifier {
         return Modifier
             .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
-            .modifyIf(width != null) { if (width == 0f) fillMaxWidth() else width(Dp(width!!+(paddingStart ?:0f) + (paddingEnd ?: 0f))) }
-            .modifyIf(height != null) { if (height == 0f) fillMaxHeight() else height(Dp(height!!+(paddingTop?:0f) + (paddingBottom ?: 0f))) }
+            .modifyIf(width != null) { width(Dp(width!!+(paddingStart ?:0f) + (paddingEnd ?: 0f))) }
+            .modifyIf(height != null) { height(Dp(height!!+(paddingTop?:0f) + (paddingBottom ?: 0f))) }
             .modifyIf(backgroundColor != null) {
                 background(
                     backgroundColor!!.toColor(),

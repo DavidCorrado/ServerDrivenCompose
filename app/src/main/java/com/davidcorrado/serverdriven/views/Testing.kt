@@ -260,7 +260,7 @@ fun TestingPreview() {
                                 ServerText(text = "Row Border Background"),
                             ),
                             modifier = ServerModifier(
-                                width = 0f,
+                                weight = 1f,
                                 paddingBottom = 20f,
                                 paddingTop = 20f,
                                 paddingStart = 20f,
@@ -275,14 +275,14 @@ fun TestingPreview() {
                         paddingTop = 20f,
                         paddingStart = 20f,
                         paddingEnd = 20f,
-                        width = 0f,
+                        weight = 1f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 20f
                     )
                 ),
                 ServerSpacer(
                     modifier = ServerModifier(
-                        width = 0f,
+                        weight = 1f,
                         height = 20f,
                         backgroundColor = "#0000ff",
                     )
@@ -335,27 +335,11 @@ fun TestingPreview() {
                         )
                     )
                 ),
-                ServerRow(
-                    items = listOf(
-                        ServerText(
-                            text = "Left 30",
-                            modifier = ServerModifier(width = 0f, backgroundColor = "#ff0000")
-                        ),
-                        ServerText(
-                            text = "Mid 50",
-                            modifier = ServerModifier(width = 0f, backgroundColor = "#00ff00")
-                        ),
-                        ServerText(
-                            text = "Right 30",
-                            modifier = ServerModifier(width = 0f, backgroundColor = "#0000ff")
-                        )
-                    )
-                ),
                 ServerCard(
                     items = listOf(
                         ServerText(
                             text = "Card BG",
-                            modifier = ServerModifier(width = 0f, backgroundColor = "#ff0000")
+                            modifier = ServerModifier(weight = 1f, backgroundColor = "#ff0000")
                         ),
                     ),
                     modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f)
