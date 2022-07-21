@@ -1,12 +1,15 @@
 package com.davidcorrado.serverdriven.views
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -20,9 +23,30 @@ fun Testing2Preview() {
         Surface {
             Column(modifier = Modifier.fillMaxWidth()) {
                 Image(
-                    modifier = Modifier.padding(20.dp).height(20.dp).width(20.dp),
+                    modifier = Modifier
+                        .padding(20.dp)
+                        .height(20.dp)
+                        .width(20.dp),
                     painter = painterResource(com.davidcorrado.serverdriven.R.drawable.ic_disappointed),
                     contentDescription = "Test"
+                )
+                Image(
+                    modifier = Modifier
+                        .height(60.dp)
+                        .width(60.dp)
+                        .padding(20.dp),
+                    painter = painterResource(com.davidcorrado.serverdriven.R.drawable.ic_disappointed),
+                    contentDescription = "Test"
+                )
+                Text(
+                    "Test",
+                    modifier = Modifier
+//                        .height(20.dp)
+//                        .width(20.dp)
+                        .border(20.dp, Color.Red)
+                        .padding(20.dp)
+                        .border(20.dp, Color.Green)
+                        .padding(20.dp)
                 )
             }
         }
@@ -280,20 +304,19 @@ fun TestingPreview() {
                     items = listOf(
                         ServerImage(
                             drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
-                            modifier = ServerModifier(height = 24f, width = 24f)
+                            modifier = ServerModifier(height = 20f, width = 20f)
                         ),
-                        //The below does not work padding and height and width do not work together with padding right.  Padding goes inside of height and width
-//                        ServerImage(
-//                            drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
-//                            modifier = ServerModifier(
-//                                height = 24f,
-//                                width = 24f,
-//                                paddingStart = 20f,
-//                                paddingEnd = 20f,
-//                                paddingTop = 20f,
-//                                paddingBottom = 20f
-//                            )
-//                        ),
+                        ServerImage(
+                            drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
+                            modifier = ServerModifier(
+                                height = 60f,
+                                width = 60f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 20f,
+                                paddingBottom = 20f
+                            )
+                        ),
                     )
                 )
             )
@@ -301,7 +324,6 @@ fun TestingPreview() {
     LazyColumn(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 20.dp)
     ) {
         items(data.items) { item ->
             SDContent(item = item, this)
