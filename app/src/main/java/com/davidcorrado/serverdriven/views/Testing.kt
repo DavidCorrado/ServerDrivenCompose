@@ -374,23 +374,25 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f)
                 ),
-//                ServerRow(
-//                    items = listOf(
-//                        ServerText(
-//                            text = "Left 30 is going to get really long.Left 30 is going to get really long",
-//                            modifier = ServerModifier(
-//                                backgroundColor = "#ff0000"
-//                            )
-//                        ),
-//                        ServerText(
-//                            text = "Mid 50 is going to get really long. Mid 50 is going to get really long",
-//                            modifier = ServerModifier(
-//                                backgroundColor = "#00ff00"
-//                            )
-//                        ),
-//                    )
+                ServerRow(
+                    items = listOf(
+                        ServerText(
+                            text = "Text is going to get really long.Left 30 is going to get really long",
+                            modifier = ServerModifier(
+//                                weight = 1f,
+                                backgroundColor = "#ff0000"
+                            )
+                        ),
+                        ServerText(
+                            text = "Text is going to get really long. Mid 50 is going to get really long",
+                            modifier = ServerModifier(
+//                                weight = 1f,
+                                backgroundColor = "#00ff00"
+                            )
+                        ),
+                    )
 
-//                ),
+                ),
             )
         )
     LazyColumn(
