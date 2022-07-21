@@ -259,14 +259,13 @@ fun TestingPreview() {
                 ServerSpacer(
                     modifier = ServerModifier(
                         width = 0f,
-                        weight = 1f,
                         height = 20f,
                         backgroundColor = "#0000ff",
                     )
                 ),
                 ServerRow(
                     items = listOf(
-                        ServerSpacer(modifier = ServerModifier(weight = 1f)),
+                        ServerSpacer(),
                         ServerSpacer(
                             modifier = ServerModifier(
                                 width = 50f,
@@ -274,7 +273,7 @@ fun TestingPreview() {
                                 backgroundColor = "#0000ff",
                             )
                         ),
-                        ServerSpacer(modifier = ServerModifier(weight = 1f)),
+                        ServerSpacer(),
                     )
                 ),
                 ServerRow(
