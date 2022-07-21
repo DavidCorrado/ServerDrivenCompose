@@ -1,10 +1,7 @@
 package com.davidcorrado.serverdriven.ui.sd.data
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -24,31 +21,23 @@ data class ServerModifier(
     val height: Float? = null,
     val weight: Float? = null,
     val backgroundColor: String? = null,
-    val borderSize: Float? = null,
-    val borderColor: String? = null,
     val cornerRadius: Float? = null,
 ) {
     fun toModifier(scope: Any?): Modifier {
         return Modifier
+            .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
+            .modifyIf(width != null) { if (width == 0f) fillMaxWidth() else width(Dp(width!!)) }
+            .modifyIf(height != null) { if (height == 0f) fillMaxHeight() else height(Dp(height!!)) }
+            .modifyIf(backgroundColor != null) {
+                background(
+                    backgroundColor!!.toColor(),
+                    RoundedCornerShape(Dp(cornerRadius ?: 0f))
+                )
+            }
+            .modifyIf(cornerRadius != null) { clip(RoundedCornerShape(Dp(cornerRadius!!))) }
             .modifyIf(paddingStart != null) { padding(start = Dp(paddingStart!!)) }
             .modifyIf(paddingEnd != null) { padding(end = Dp(paddingEnd!!)) }
             .modifyIf(paddingTop != null) { padding(top = Dp(paddingTop!!)) }
             .modifyIf(paddingBottom != null) { padding(bottom = Dp(paddingBottom!!)) }
-            .modifyIf(width != null && height != null) { width(Dp(width!!)).height(Dp(height!!)) }
-            .modifyIf(weight != null) { weightWithScope(scope, weight!!) }
-            .modifyIf(backgroundColor != null) {
-                background(
-                    backgroundColor!!.toColor(),
-                    RoundedCornerShape(Dp(cornerRadius!!))
-                )
-            }
-            .modifyIf(borderColor != null) {
-                border(
-                    Dp(borderSize ?: 1f),
-                    borderColor!!.toColor(),
-                    RoundedCornerShape(Dp(cornerRadius!!))
-                )
-            }
-            .modifyIf(cornerRadius != null) { clip(RoundedCornerShape(Dp(cornerRadius!!))) }
     }
 }

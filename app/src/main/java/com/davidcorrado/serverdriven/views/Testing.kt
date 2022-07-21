@@ -1,16 +1,13 @@
 package com.davidcorrado.serverdriven.views
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.davidcorrado.serverdriven.ui.sd.data.*
@@ -20,10 +17,14 @@ import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 @Composable
 fun Testing2Preview() {
     Column {
-        Surface(modifier = Modifier
-            .size(200.dp, 200.dp)
-            .background(Color.Blue)) {
-            Text("test", modifier = Modifier.background(Color.Red))
+        Surface {
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Image(
+                    modifier = Modifier.padding(20.dp).height(20.dp).width(20.dp),
+                    painter = painterResource(com.davidcorrado.serverdriven.R.drawable.ic_disappointed),
+                    contentDescription = "Test"
+                )
+            }
         }
     }
 }
@@ -65,7 +66,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerColumn(
-                    alignment =  ServerAlignment.CENTER,
+                    alignment = ServerAlignment.CENTER,
                     items = listOf(
                         ServerText(text = "Column Center"),
                     ),
@@ -77,7 +78,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerColumn(
-                    alignment =  ServerAlignment.END,
+                    alignment = ServerAlignment.END,
                     items = listOf(
                         ServerText(text = "Column End"),
                     ),
@@ -89,7 +90,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    alignment =  ServerAlignment.CENTER,
+                    alignment = ServerAlignment.CENTER,
                     items = listOf(
                         ServerText(text = "Row Center"),
                     ),
@@ -101,7 +102,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    alignment =  ServerAlignment.END,
+                    alignment = ServerAlignment.END,
                     items = listOf(
                         ServerText(text = "Row End"),
                     ),
@@ -114,8 +115,8 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     items = listOf(
-                                ServerText(text = "Row Padding HW"),
-                                ServerText(text = "Row 2")
+                        ServerText(text = "Row Padding HW"),
+                        ServerText(text = "Row 2")
                     ),
                     spacing = 20f,
                     modifier = ServerModifier(
@@ -131,8 +132,8 @@ fun TestingPreview() {
                 ),
                 ServerColumn(
                     items = listOf(
-                                ServerText(text = "Col Padding HW"),
-                                ServerText(text = "Col 2")
+                        ServerText(text = "Col Padding HW"),
+                        ServerText(text = "Col 2")
                     ),
                     spacing = 20f,
                     modifier = ServerModifier(
@@ -201,20 +202,108 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     items = listOf(
-                        ServerText(text = "Row Border Background"),
+                        ServerRow(
+                            items = listOf(
+                                ServerText(text = "Row Border Background"),
+                            ),
+                            modifier = ServerModifier(
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                width = 200f,
+                                height = 200f,
+                                backgroundColor = "#00ff00",
+                                cornerRadius = 20f
+                            )
+                        ),
                     ),
                     modifier = ServerModifier(
                         width = 200f,
                         height = 200f,
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
                         backgroundColor = "#ff0000",
-                        borderSize = 2f,
-                        borderColor = "#0000ff",
-                        cornerRadius = 5f
+                        cornerRadius = 20f
                     )
                 ),
+                ServerRow(
+                    items = listOf(
+                        ServerRow(
+                            items = listOf(
+                                ServerText(text = "Row Border Background"),
+                            ),
+                            modifier = ServerModifier(
+                                width = 0f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                backgroundColor = "#00ff00",
+                                cornerRadius = 20f
+                            )
+                        ),
+                    ),
+                    modifier = ServerModifier(
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
+                        width = 0f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 20f
+                    )
+                ),
+                ServerSpacer(
+                    modifier = ServerModifier(
+                        width = 0f,
+                        weight = 1f,
+                        height = 20f,
+                        backgroundColor = "#0000ff",
+                    )
+                ),
+                ServerRow(
+                    items = listOf(
+                        ServerSpacer(modifier = ServerModifier(weight = 1f)),
+                        ServerSpacer(
+                            modifier = ServerModifier(
+                                width = 50f,
+                                height = 20f,
+                                backgroundColor = "#0000ff",
+                            )
+                        ),
+                        ServerSpacer(modifier = ServerModifier(weight = 1f)),
+                    )
+                ),
+                ServerRow(
+                    items = listOf(
+                        ServerImage(
+                            drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
+                            modifier = ServerModifier(height = 24f, width = 24f)
+                        ),
+                        //The below does not work padding and height and width do not work together with padding right.  Padding goes inside of height and width
+//                        ServerImage(
+//                            drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
+//                            modifier = ServerModifier(
+//                                height = 24f,
+//                                width = 24f,
+//                                paddingStart = 20f,
+//                                paddingEnd = 20f,
+//                                paddingTop = 20f,
+//                                paddingBottom = 20f
+//                            )
+//                        ),
+                    )
+                )
             )
         )
-    LazyColumn(modifier = Modifier.fillMaxWidth()) {
+    LazyColumn(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 20.dp)
+    ) {
         items(data.items) { item ->
             SDContent(item = item, this)
         }

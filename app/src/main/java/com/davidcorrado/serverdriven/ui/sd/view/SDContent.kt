@@ -6,38 +6,38 @@ import com.davidcorrado.serverdriven.ui.sd.data.*
 
 @Composable
 fun SDContent(item: Any?, scope: Any? = null) {
-        when (item) {
-            is ServerCard -> {
-                SDCard(item, scope) {
-                    SDContent(items = item.items, scope = scope)
-                }
-            }
-            is ServerColumn -> {
-                SDColumn(item, scope) {
-                    SDContent(items = item.items, scope = this)
-                }
-            }
-            is ServerRow -> {
-                SDRow(item, scope) {
-                    SDContent(items = item.items, scope = this)
-                }
-            }
-            is ServerImage -> {
-                SDImage(serverImage = item, scope = scope)
-            }
-            is ServerText -> {
-                SDText(serverText = item, scope = scope)
-            }
-            is ServerBubble -> {
-                SDBubble(serverBubble = item, scope = scope)
-            }
-            is ServerSpacer -> {
-                SDSpacer(scope = scope)
-            }
-            else -> {
-                Log.e("DavidData", "DavidError$item")
+    when (item) {
+        is ServerCard -> {
+            SDCard(item, scope) {
+                SDContent(items = item.items, scope = scope)
             }
         }
+        is ServerColumn -> {
+            SDColumn(item, scope) {
+                SDContent(items = item.items, scope = this)
+            }
+        }
+        is ServerRow -> {
+            SDRow(item, scope) {
+                SDContent(items = item.items, scope = this)
+            }
+        }
+        is ServerImage -> {
+            SDImage(serverImage = item, scope = scope)
+        }
+        is ServerText -> {
+            SDText(serverText = item, scope = scope)
+        }
+        is ServerBubble -> {
+            SDBubble(serverBubble = item, scope = scope)
+        }
+        is ServerSpacer -> {
+            SDSpacer(serverSpacer = item, scope = scope)
+        }
+        else -> {
+            Log.e("DavidData", "DavidError$item")
+        }
+    }
 }
 
 @Composable
