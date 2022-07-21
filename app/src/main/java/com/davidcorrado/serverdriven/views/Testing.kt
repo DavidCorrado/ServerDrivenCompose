@@ -341,21 +341,21 @@ fun TestingPreview() {
                             modifier = ServerModifier(width = 200f),
                             items = listOf(
                                 ServerText(
-                                    text = "Left 30",
+                                    text = "Left 30 is going to get really long",
                                     modifier = ServerModifier(
                                         weight = .3f,
                                         backgroundColor = "#ff0000"
                                     )
                                 ),
                                 ServerText(
-                                    text = "Mid 50",
+                                    text = "Mid 50 is going to get really long",
                                     modifier = ServerModifier(
                                         weight = .5f,
                                         backgroundColor = "#00ff00"
                                     )
                                 ),
                                 ServerText(
-                                    text = "Right 30",
+                                    text = "Right 30 is going to get really long",
                                     modifier = ServerModifier(
                                         weight = .3f,
                                         backgroundColor = "#0000ff"
@@ -373,7 +373,24 @@ fun TestingPreview() {
                         ),
                     ),
                     modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f)
-                )
+                ),
+//                ServerRow(
+//                    items = listOf(
+//                        ServerText(
+//                            text = "Left 30 is going to get really long.Left 30 is going to get really long",
+//                            modifier = ServerModifier(
+//                                backgroundColor = "#ff0000"
+//                            )
+//                        ),
+//                        ServerText(
+//                            text = "Mid 50 is going to get really long. Mid 50 is going to get really long",
+//                            modifier = ServerModifier(
+//                                backgroundColor = "#00ff00"
+//                            )
+//                        ),
+//                    )
+
+//                ),
             )
         )
     LazyColumn(
