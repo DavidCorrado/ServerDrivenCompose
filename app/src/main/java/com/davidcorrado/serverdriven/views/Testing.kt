@@ -309,8 +309,8 @@ fun TestingPreview() {
                         ServerImage(
                             drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
                             modifier = ServerModifier(
-                                height = 60f,
-                                width = 60f,
+                                height = 20f,
+                                width = 20f,
                                 paddingStart = 20f,
                                 paddingEnd = 20f,
                                 paddingTop = 20f,
