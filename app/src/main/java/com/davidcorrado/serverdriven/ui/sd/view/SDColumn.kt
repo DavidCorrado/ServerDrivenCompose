@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import com.davidcorrado.serverdriven.extension.toColor
+import com.davidcorrado.serverdriven.extension.toModifier
 import com.davidcorrado.serverdriven.ui.sd.data.ServerAlignment
 import com.davidcorrado.serverdriven.ui.sd.data.ServerColumn
 
@@ -21,8 +22,7 @@ fun SDColumn(
     content: @Composable ColumnScope.() -> Unit
 ) {
     Column(
-        modifier = serverColumn.modifier?.toModifier(scope)
-            ?: Modifier,
+        modifier = Modifier.toModifier(serverColumn.modifier, scope),
         content = content,
         horizontalAlignment = if (serverColumn.alignment == ServerAlignment.CENTER) Alignment.CenterHorizontally else if (serverColumn.alignment == ServerAlignment.END) Alignment.End else Alignment.Start,
         verticalArrangement = if (serverColumn.spacing != null) Arrangement.spacedBy(Dp(serverColumn.spacing)) else Arrangement.Top
