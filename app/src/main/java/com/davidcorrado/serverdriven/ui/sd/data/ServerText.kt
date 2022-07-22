@@ -16,7 +16,6 @@ private const val DEFAULT_SIZE = 16
 data class ServerText(
     val type: ServerItemType = ServerItemType.TEXT,
     val text: String,
-    val adaText: String? = null,
     val size: Int? = null,
     val style: FontType? = null,
     val color: String? = null,

@@ -6,6 +6,5 @@ import com.squareup.moshi.JsonClass
 data class ServerImage(
     val type: ServerItemType = ServerItemType.IMAGE,
     val drawableRes: Int,
-    val adaText: String? = null,
     val modifier: ServerModifier?
 )

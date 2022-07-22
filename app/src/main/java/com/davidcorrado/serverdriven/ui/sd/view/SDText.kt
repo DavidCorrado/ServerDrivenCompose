@@ -15,7 +15,6 @@ fun SDText(serverText: ServerText, scope: Any?) {
         style = serverText.getTextStyle(),
         text = serverText.text,
         modifier = Modifier.toModifier(serverText.modifier, scope).semantics {
-            contentDescription = serverText.adaText ?: serverText.text
             if (serverText.isHeading()) heading()
         }
     )

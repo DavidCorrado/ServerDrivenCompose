@@ -1,5 +1,6 @@
 package com.davidcorrado.serverdriven.views
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,7 +10,10 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.tooling.preview.Preview
+import com.davidcorrado.serverdriven.R
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 
@@ -18,13 +22,16 @@ import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 fun Testing2Preview() {
     Column {
         Surface {
-            Row(modifier = Modifier.fillMaxWidth()) {
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .clickable { }
+                .clearAndSetSemantics { contentDescription = "ABC" }) {
                 Text(
                     modifier = Modifier.weight(.2f, false),
-                    text = "Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 "
+                    text = "Test3"
                 )
                 Text(
-                    "Blah blah blah",
+                    "Blah",
                     modifier = Modifier
                 )
             }
@@ -38,6 +45,32 @@ fun TestingPreview() {
     val data =
         ServerResponse(
             items = listOf(
+                ServerRow(
+                    items = listOf(
+                        ServerText(text = "Read Me"),
+                        ServerText(text = "Do Not Read", modifier = ServerModifier(adaText = "Read Me")),
+                        ServerText(text = "Read me Heading", isHeading = true),
+                        ServerImage(
+                            drawableRes = R.drawable.ic_disappointed,
+                            modifier = ServerModifier(
+                                adaText = "Disappointed",
+                                height = 20f,
+                                width = 20f
+                            )
+                        ),
+                        ServerImage(
+                            drawableRes = R.drawable.ic_disappointed,
+                            modifier = ServerModifier(height = 20f, width = 20f)
+                        )
+                    )
+                ),
+                ServerRow(
+                    modifier = ServerModifier(adaText = "Read Me"),
+                    items = listOf(
+                        ServerText(text = "Don't Read"),
+                        ServerText(text = "Don't Read", modifier = ServerModifier(adaText = "Don't Read")),
+                    )
+                ),
                 ServerCard(
                     items = listOf(ServerText(text = "Card"))
                 ),
@@ -285,11 +318,11 @@ fun TestingPreview() {
                 ServerRow(
                     items = listOf(
                         ServerImage(
-                            drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
+                            drawableRes = R.drawable.ic_disappointed,
                             modifier = ServerModifier(height = 20f, width = 20f)
                         ),
                         ServerImage(
-                            drawableRes = com.davidcorrado.serverdriven.R.drawable.ic_disappointed,
+                            drawableRes = R.drawable.ic_disappointed,
                             modifier = ServerModifier(
                                 height = 20f,
                                 width = 20f,

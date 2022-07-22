@@ -32,10 +32,10 @@ class MainActivity : ComponentActivity() {
                                     items = listOf(
                                         ServerImage(
                                             drawableRes = R.drawable.ic_streak,
-                                            adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 40f,
-                                                height = 40f
+                                                height = 40f,
+                                                adaText = "Android",
                                             )
                                         ),
                                         ServerText(
@@ -57,10 +57,10 @@ class MainActivity : ComponentActivity() {
                                     items = listOf(
                                         ServerImage(
                                             drawableRes = R.drawable.ic_streak,
-                                            adaText = "Android",
                                             modifier = ServerModifier(
                                                 width = 48f,
-                                                height = 48f
+                                                height = 48f,
+                                                adaText = "Android",
                                             )
                                         ),
                                         ServerText(

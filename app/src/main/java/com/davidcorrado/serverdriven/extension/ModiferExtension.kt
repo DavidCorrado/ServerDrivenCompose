@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.unit.Dp
 import com.davidcorrado.serverdriven.ui.sd.data.ServerModifier
 
@@ -40,7 +42,11 @@ fun Modifier.weightWithScope(scope: Any?, wt: Float?): Modifier {
 }
 
 fun Modifier.toModifier(serverModifier: ServerModifier?, scope: Any?): Modifier {
-    return Modifier
+    return modifyIf(serverModifier?.adaText != null) {
+        clearAndSetSemantics {
+            contentDescription = serverModifier?.adaText!!
+        }
+    }
         .modifyIf(serverModifier?.weight != null) { weightWithScope(scope, serverModifier?.weight) }
         .modifyIf(serverModifier?.width != null) {
             width(
