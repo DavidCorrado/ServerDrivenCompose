@@ -9,24 +9,28 @@ fun Modifier.modifyIf(condition: Boolean, modify: Modifier.() -> Modifier) =
     if (condition) modify() else this
 
 fun Modifier.weightWithScope(scope: Any?, wt: Float?): Modifier {
-    if (scope is ColumnScope) {
-        with(scope) {
-            if (wt == null) {
-                return weight(1f, false)
-            } else {
-                return weight(wt)
+    when (scope) {
+        is ColumnScope -> {
+            with(scope) {
+                if (wt == null) {
+                    return weight(1f, false)
+                } else {
+                    return weight(wt)
+                }
             }
         }
-    } else if (scope is RowScope) {
-        with(scope) {
-            if (wt == null) {
-                return weight(1f, false)
-            } else {
-                return weight(wt)
+        is RowScope -> {
+            with(scope) {
+                if (wt == null) {
+                    return weight(1f, false)
+                } else {
+                    return weight(wt)
+                }
             }
         }
-    } else {
-        Log.e("DavidData", "DavidErrorWeightNotFound")
+        else -> {
+            Log.e("DavidData", "DavidErrorWeightNotFound")
+        }
     }
     return this
 }
