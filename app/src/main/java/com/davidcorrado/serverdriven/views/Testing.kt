@@ -1,18 +1,15 @@
 package com.davidcorrado.serverdriven.views
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 
@@ -21,32 +18,14 @@ import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 fun Testing2Preview() {
     Column {
         Surface {
-            Column(modifier = Modifier.fillMaxWidth()) {
-                Image(
-                    modifier = Modifier
-                        .padding(20.dp)
-                        .height(20.dp)
-                        .width(20.dp),
-                    painter = painterResource(com.davidcorrado.serverdriven.R.drawable.ic_disappointed),
-                    contentDescription = "Test"
-                )
-                Image(
-                    modifier = Modifier
-                        .height(60.dp)
-                        .width(60.dp)
-                        .padding(20.dp),
-                    painter = painterResource(com.davidcorrado.serverdriven.R.drawable.ic_disappointed),
-                    contentDescription = "Test"
+            Row(modifier = Modifier.fillMaxWidth()) {
+                Text(
+                    modifier = Modifier.weight(.2f, false),
+                    text = "Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 Test3 "
                 )
                 Text(
-                    "Test",
+                    "Blah blah blah",
                     modifier = Modifier
-//                        .height(20.dp)
-//                        .width(20.dp)
-                        .border(20.dp, Color.Red)
-                        .padding(20.dp)
-                        .border(20.dp, Color.Green)
-                        .padding(20.dp)
                 )
             }
         }
@@ -275,16 +254,19 @@ fun TestingPreview() {
                         paddingTop = 20f,
                         paddingStart = 20f,
                         paddingEnd = 20f,
-                        weight = 1f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 20f
                     )
                 ),
-                ServerSpacer(
-                    modifier = ServerModifier(
-                        weight = 1f,//TODO this no longer works.  Its not wrapped with a Col or Row.  Need to think about this more
-                        height = 20f,
-                        backgroundColor = "#0000ff",
+                ServerRow(
+                    items = listOf(
+                        ServerSpacer(
+                            modifier = ServerModifier(
+                                weight = 1f,
+                                height = 20f,
+                                backgroundColor = "#0000ff",
+                            )
+                        )
                     )
                 ),
                 ServerRow(
@@ -369,10 +351,17 @@ fun TestingPreview() {
                     items = listOf(
                         ServerText(
                             text = "Card BG",
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#ff0000")
+                            modifier = ServerModifier(backgroundColor = "#ff0000")
                         ),
                     ),
-                    modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f, paddingBottom = 20f, paddingEnd = 20f, paddingTop = 20f, paddingStart = 20f,)
+                    modifier = ServerModifier(
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 60f,
+                        paddingBottom = 20f,
+                        paddingEnd = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                    )
                 ),
                 ServerRow(
                     items = listOf(
@@ -383,7 +372,7 @@ fun TestingPreview() {
                             )
                         ),
                         ServerText(
-                            text = "Text is going to get really long. Mid 50 is going to get really long",
+                            text = "Text ",
                             modifier = ServerModifier(
                                 backgroundColor = "#00ff00"
                             )
@@ -391,12 +380,31 @@ fun TestingPreview() {
                     )
 
                 ),
-                ServerSpacer(
-                    modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f, paddingBottom = 20f, paddingEnd = 20f, paddingTop = 20f, paddingStart = 20f,)
+                ServerRow(
+                    items = listOf(
+                        ServerSpacer(
+                            modifier = ServerModifier(
+                                weight = 1f,
+                                backgroundColor = "#ff0000",
+                                cornerRadius = 60f,
+                                paddingBottom = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                            )
+                        )
+                    )
                 ),
                 ServerText(
                     text = "Test",
-                    modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f, paddingBottom = 20f, paddingEnd = 20f, paddingTop = 20f, paddingStart = 20f,)
+                    modifier = ServerModifier(
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 60f,
+                        paddingBottom = 20f,
+                        paddingEnd = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                    )
                 ),
             )
         )
@@ -405,7 +413,7 @@ fun TestingPreview() {
             .fillMaxWidth()
     ) {
         items(data.items) { item ->
-            SDContent(item = item, this)
+            SDContent(item = item)
         }
     }
 }

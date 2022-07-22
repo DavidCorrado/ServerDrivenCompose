@@ -1,5 +1,6 @@
 package com.davidcorrado.serverdriven.extension
 
+import android.util.Log
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.ui.Modifier
@@ -10,20 +11,22 @@ fun Modifier.modifyIf(condition: Boolean, modify: Modifier.() -> Modifier) =
 fun Modifier.weightWithScope(scope: Any?, wt: Float?): Modifier {
     if (scope is ColumnScope) {
         with(scope) {
-            if(wt==null) {
-                return weight(1f,false)
+            if (wt == null) {
+                return weight(1f, false)
             } else {
                 return weight(wt)
             }
         }
     } else if (scope is RowScope) {
         with(scope) {
-            if(wt==null) {
-                return weight(1f,false)
+            if (wt == null) {
+                return weight(1f, false)
             } else {
                 return weight(wt)
             }
         }
+    } else {
+        Log.e("DavidData", "DavidErrorWeightNotFound")
     }
     return this
 }

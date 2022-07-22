@@ -1,7 +1,9 @@
 package com.davidcorrado.serverdriven.ui.sd.data
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -25,9 +27,21 @@ data class ServerModifier(
 ) {
     fun toModifier(scope: Any?): Modifier {
         return Modifier
-            .weightWithScope(scope, weight)
-            .modifyIf(width != null) { width(Dp(width!!+(paddingStart ?:0f) + (paddingEnd ?: 0f))) }
-            .modifyIf(height != null) { height(Dp(height!!+(paddingTop?:0f) + (paddingBottom ?: 0f))) }
+            .modifyIf(weight != null) { weightWithScope(scope, weight) }
+            .modifyIf(width != null) {
+                width(
+                    Dp(
+                        width!! + (paddingStart ?: 0f) + (paddingEnd ?: 0f)
+                    )
+                )
+            }
+            .modifyIf(height != null) {
+                height(
+                    Dp(
+                        height!! + (paddingTop ?: 0f) + (paddingBottom ?: 0f)
+                    )
+                )
+            }
             .modifyIf(backgroundColor != null) {
                 background(
                     backgroundColor!!.toColor(),
