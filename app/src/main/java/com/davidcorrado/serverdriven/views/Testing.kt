@@ -372,7 +372,7 @@ fun TestingPreview() {
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#ff0000")
                         ),
                     ),
-                    modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f)
+                    modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f, paddingBottom = 20f, paddingEnd = 20f, paddingTop = 20f, paddingStart = 20f,)
                 ),
                 ServerRow(
                     items = listOf(
@@ -390,6 +390,13 @@ fun TestingPreview() {
                         ),
                     )
 
+                ),
+                ServerSpacer(
+                    modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f, paddingBottom = 20f, paddingEnd = 20f, paddingTop = 20f, paddingStart = 20f,)
+                ),
+                ServerText(
+                    text = "Test",
+                    modifier = ServerModifier(backgroundColor = "#ff0000", cornerRadius = 60f, paddingBottom = 20f, paddingEnd = 20f, paddingTop = 20f, paddingStart = 20f,)
                 ),
             )
         )
