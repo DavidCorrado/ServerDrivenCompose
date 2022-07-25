@@ -22,6 +22,11 @@ fun SDContent(item: Any?, scope: Any? = null) {
                 SDContent(items = item.items, scope = this)
             }
         }
+        is ServerBox -> {
+            SDBox(item, scope) {
+                SDContent(items = item.items, scope = this)
+            }
+        }
         is ServerImage -> {
             SDImage(serverImage = item, scope = scope)
         }
