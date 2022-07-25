@@ -462,14 +462,71 @@ fun TestingPreview() {
                                 ServerRow(
                                     items = listOf(
                                         ServerImage(
-                                            drawableRes = R.drawable.ic_disappointed,
-                                            alignment = ImageAlignment.TOP_CENTER,
+                                            drawableRes = R.drawable.ic_background,
+                                            alignment = ImageAlignment.TOP_END,
                                             modifier = ServerModifier(
                                                 weight = 1f,
-                                                aspectRatio = .8f
-                                            )
+                                                aspectRatio = 1.2f
+                                            ),
+                                            contentScale = ImageContentScale.FILL_HEIGHT
                                         )
                                     )
+                                ),
+                                ServerColumn(
+                                    items = listOf(
+                                        ServerText(
+                                            text = "Overlay",
+                                            modifier = ServerModifier(backgroundColor = "#FF0000")
+                                        ),
+                                        ServerSpacer(),
+                                        ServerText(
+                                            text = "Overlay",
+                                            modifier = ServerModifier(backgroundColor = "#FF0000")
+                                        ),
+                                    ),
+                                    modifier = ServerModifier(
+                                        weight = 1f,
+                                        aspectRatio = 1.2f
+                                    ),
+                                )
+
+                            )
+                        ),
+                    )
+                ),
+                ServerColumn(
+                    items = listOf(
+                        ServerBox(
+                            items = listOf(
+                                ServerRow(
+                                    items = listOf(
+                                        ServerImage(
+                                            drawableRes = R.drawable.ic_background,
+                                            alignment = ImageAlignment.BOTTOM_END,
+                                            modifier = ServerModifier(
+                                                weight = 1f,
+                                                aspectRatio = 3f
+                                            ),
+                                            contentScale = ImageContentScale.FILL_WIDTH
+                                        )
+                                    )
+                                ),
+                                ServerRow(
+                                    items = listOf(
+                                        ServerText(
+                                            text = "Overlay",
+                                            modifier = ServerModifier(backgroundColor = "#FF0000")
+                                        ),
+                                        ServerSpacer(),
+                                        ServerText(
+                                            text = "Overlay",
+                                            modifier = ServerModifier(backgroundColor = "#FF0000")
+                                        ),
+                                    ),
+                                    modifier = ServerModifier(
+                                        weight = 1f,
+                                        aspectRatio = 3f
+                                    ),
                                 )
                             )
                         ),
