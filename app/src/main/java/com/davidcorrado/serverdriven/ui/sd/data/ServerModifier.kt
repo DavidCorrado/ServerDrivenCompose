@@ -14,4 +14,5 @@ data class ServerModifier(
     val backgroundColor: String? = null,
     val cornerRadius: Float? = null,
     val adaText: String? = null,
+    val aspectRatio: Float? = null
 )

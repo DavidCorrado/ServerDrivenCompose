@@ -1,17 +1,17 @@
 package com.davidcorrado.serverdriven.views
 
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.semantics.clearAndSetSemantics
-import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.davidcorrado.serverdriven.R
 import com.davidcorrado.serverdriven.ui.sd.data.*
@@ -20,20 +20,25 @@ import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 @Preview("Testing2")
 @Composable
 fun Testing2Preview() {
-    Column {
+    Column(modifier = Modifier) {
         Surface {
-            Row(modifier = Modifier
-                .fillMaxWidth()
-                .clickable { }
-                .clearAndSetSemantics { contentDescription = "ABC" }) {
-                Text(
-                    modifier = Modifier.weight(.2f, false),
-                    text = "Test3"
-                )
-                Text(
-                    "Blah",
-                    modifier = Modifier
-                )
+            Box(
+                modifier = Modifier
+                    .background(Color.Red)
+            ) {
+                Row {
+                    Image(
+                        alignment = Alignment.TopCenter,//Maybe support this?
+                        modifier = Modifier
+                            //.height(300.dp)
+                            .weight(1f)
+                            .aspectRatio(.3f)
+                            .background(Color.Green),//Fill width not working
+                        painter = painterResource(id = R.drawable.ic_disappointed),
+                        contentScale = ContentScale.Fit,//Support this
+                        contentDescription = "test"
+                    )
+                }
             }
         }
     }
@@ -48,7 +53,10 @@ fun TestingPreview() {
                 ServerRow(
                     items = listOf(
                         ServerText(text = "Read Me"),
-                        ServerText(text = "Do Not Read", modifier = ServerModifier(adaText = "Read Me")),
+                        ServerText(
+                            text = "Do Not Read",
+                            modifier = ServerModifier(adaText = "Read Me")
+                        ),
                         ServerText(text = "Read me Heading", isHeading = true),
                         ServerImage(
                             drawableRes = R.drawable.ic_disappointed,
@@ -68,7 +76,10 @@ fun TestingPreview() {
                     modifier = ServerModifier(adaText = "Read Me"),
                     items = listOf(
                         ServerText(text = "Don't Read"),
-                        ServerText(text = "Don't Read", modifier = ServerModifier(adaText = "Don't Read")),
+                        ServerText(
+                            text = "Don't Read",
+                            modifier = ServerModifier(adaText = "Don't Read")
+                        ),
                     )
                 ),
                 ServerCard(
@@ -439,6 +450,31 @@ fun TestingPreview() {
                         paddingStart = 20f,
                     )
                 ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_running,
+                    tint = "#FF0000",
+                    modifier = ServerModifier(height = 20f, width = 20f)
+                ),
+                ServerColumn(
+                    items = listOf(
+                        ServerBox(
+                            items = listOf(
+                                ServerRow(
+                                    items = listOf(
+                                        ServerImage(
+                                            drawableRes = R.drawable.ic_disappointed,
+                                            alignment = ImageAlignment.TOP_CENTER,
+                                            modifier = ServerModifier(
+                                                weight = 1f,
+                                                aspectRatio = .8f
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        ),
+                    )
+                )
             )
         )
     LazyColumn(

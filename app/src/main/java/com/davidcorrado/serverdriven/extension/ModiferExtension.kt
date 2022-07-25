@@ -64,6 +64,11 @@ fun Modifier.toModifier(serverModifier: ServerModifier?, scope: Any?): Modifier 
                 )
             )
         }
+        .modifyIf(serverModifier?.aspectRatio != null) {
+            aspectRatio(
+                serverModifier?.aspectRatio!!
+            )
+        }
         .modifyIf(serverModifier?.backgroundColor != null) {
             background(
                 serverModifier?.backgroundColor!!.toColor(),
