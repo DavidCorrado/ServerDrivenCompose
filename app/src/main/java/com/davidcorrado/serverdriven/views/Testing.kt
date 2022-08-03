@@ -361,6 +361,7 @@ fun TestingPreview() {
                         )
                     )
                 ),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
                     items = listOf(
                         ServerRow(
@@ -388,6 +389,63 @@ fun TestingPreview() {
                                     )
                                 )
                             )
+                        )
+                    )
+                ),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
+                ServerRow(
+                    modifier = ServerModifier(weight = 1f, backgroundColor = "#ffff00"),
+                    items = listOf(
+                        ServerText(
+                            text = "Left 30 is going to get really long",
+                            modifier = ServerModifier(weight = .3f, backgroundColor = "#ff0000")
+                        ),
+                        ServerText(
+                            text = "Mid 50 is going to get really long",
+                            modifier = ServerModifier(weight = .5f, backgroundColor = "#00ff00")
+                        ),
+                        ServerText(
+                            text = "Right 30 is going to get really long",
+                            modifier = ServerModifier(weight = .3f, backgroundColor = "#0000ff")
+                        )
+                    )
+                ),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
+                ServerColumn( // This case also fails on iOS, dynamic sized view with weights in container direction
+                    // View frames broken on iOS, does not render at all on android
+                    modifier = ServerModifier(weight = 1f, backgroundColor = "#ffff00"),
+                    items = listOf(
+                        ServerText(
+                            text = "Top 30 is going to get really long",
+                            modifier = ServerModifier(weight = .3f, backgroundColor = "#ff0000")
+                        ),
+                        ServerText(
+                            text = "Mid 50 is going to get really long",
+                            modifier = ServerModifier(weight = .5f, backgroundColor = "#00ff00")
+                        ),
+                        ServerText(
+                            text = "Bottom 30 is going to get really long",
+                            modifier = ServerModifier(weight = .3f, backgroundColor = "#0000ff")
+                        )
+                    )
+                ),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
+                ServerColumn(
+                    modifier = ServerModifier(weight = 1f, height = 200f, backgroundColor = "#ffff00"),
+                    // Even the with weight = 1f column does not fill screen horizontally
+                    // Maybe this should be embedded in a row on android
+                    items = listOf(
+                        ServerText(
+                            text = "Top 30 is going to get really long",
+                            modifier = ServerModifier(weight = .3f, backgroundColor = "#ff0000")
+                        ),
+                        ServerText(
+                            text = "Mid 50 is going to get really long",
+                            modifier = ServerModifier(weight = .5f, backgroundColor = "#00ff00")
+                        ),
+                        ServerText(
+                            text = "Bottom 30 is going to get really long",
+                            modifier = ServerModifier(weight = .3f, backgroundColor = "#0000ff")
                         )
                     )
                 ),
@@ -531,7 +589,11 @@ fun TestingPreview() {
                             )
                         ),
                     )
-                )
+                ),
+
+
+
+
             )
         )
     LazyColumn(
