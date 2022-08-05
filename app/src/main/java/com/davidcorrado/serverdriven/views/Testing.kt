@@ -319,6 +319,98 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     items = listOf(
+                        ServerColumn(
+                            items = listOf(
+                                ServerText(text = "Column Border Background"),
+                            ),
+                            modifier = ServerModifier(
+                                weight = 1f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                backgroundColor = "#00ff00",
+                                cornerRadius = 20f
+                            )
+                        ),
+                    ),
+                    modifier = ServerModifier(
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 20f
+                    )
+                ),
+                ServerRow(
+                    items = listOf(
+                        ServerColumn(
+                            items = listOf(
+                                ServerRow(
+                                    items = listOf(
+                                        ServerText(text = "Row/Col/Row Border Background"),
+                                    ),
+                                    modifier = ServerModifier(
+                                        weight = 1f,
+                                        paddingBottom = 20f,
+                                        paddingTop = 20f,
+                                        paddingStart = 20f,
+                                        paddingEnd = 20f,
+                                        backgroundColor = "#00ff00",
+                                        cornerRadius = 20f
+                                    )
+                                )
+                            ),
+                            modifier = ServerModifier(
+                                weight = 1f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                backgroundColor = "#00ff00",
+                                cornerRadius = 20f
+                            )
+                        ),
+                    ),
+                    modifier = ServerModifier(
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 20f
+                    )
+                ),
+                ServerRow(
+                    items = listOf(
+                        ServerRow(
+                            items = listOf(
+                                ServerText(text = "Row Border Background"),
+                            ),
+                            modifier = ServerModifier(
+                                weight = 0.25f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                backgroundColor = "#00ff00",
+                                cornerRadius = 20f
+                            )
+                        ),
+                    ),
+                    modifier = ServerModifier(
+                        weight = 1f,
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
+                        backgroundColor = "#ff0000",
+                        cornerRadius = 20f
+                    )
+                ),
+                ServerRow(
+                    items = listOf(
                         ServerSpacer(
                             modifier = ServerModifier(
                                 weight = 1f,
