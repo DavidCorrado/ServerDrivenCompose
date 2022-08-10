@@ -790,207 +790,6 @@ fun TestingPreview() {
                     )
                 ),
                 ServerSpacer(modifier =  ServerModifier(height = 20f)),
-                ServerColumn(
-                    modifier = ServerModifier(paddingStart = 40f, paddingEnd = 40f, paddingTop = 40f, paddingBottom = 40f, weight = 1f, backgroundColor = "#808080"),
-                    items = listOf(
-                        ServerRow(
-                            modifier = ServerModifier(weight = 0.2f, backgroundColor = "#008000"),
-                            items = listOf(
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f, backgroundColor = "#0000ff"),
-                                    items = listOf (
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                )
-                            )
-                        ),
-                        ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                        ServerRow(
-                            modifier = ServerModifier(weight = 0.2f, backgroundColor = "#008000"),
-                            items = listOf(
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf (
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                )
-                            )
-                        ),
-                        ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                        ServerRow(
-                            modifier = ServerModifier(weight = 0.2f, backgroundColor = "#008000"),
-                            items = listOf(
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf (
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = 0.2f),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                ServerSpacer(modifier =  ServerModifier(height = 20f)),
-                ServerColumn(
-                    modifier = ServerModifier(paddingStart = 40f, paddingEnd = 40f, paddingTop = 40f, paddingBottom = 40f, backgroundColor = "#808080"),
-                    items = listOf(
-                        ServerRow(
-                            modifier = ServerModifier(backgroundColor = "#008000"),
-                            items = listOf(
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf (
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = null)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = null)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                )
-                            )
-                        ),
-                        ServerSpacer(modifier = ServerModifier(weight = null)),
-                        ServerRow(
-                            modifier = ServerModifier(weight = null, backgroundColor = "#008000"),
-                            items = listOf(
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf (
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.2f)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = null)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                )
-                            )
-                        ),
-                        ServerSpacer(modifier = ServerModifier(weight = null)),
-                        ServerRow(
-                            modifier = ServerModifier(weight = null, backgroundColor = "#008000"),
-                            items = listOf(
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf (
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = null)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = null)),
-                                ServerColumn(
-                                    modifier = ServerModifier(weight = null),
-                                    items = listOf(
-                                        ServerImage(drawableRes = R.drawable.ic_disappointed, modifier = ServerModifier(aspectRatio = 1.1f)),
-                                        ServerSpacer(modifier = ServerModifier(height = 10f)),
-                                        ServerText(text = "Disappointed")
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
                 ServerBox(
                     modifier = ServerModifier(weight = 1f),
                     items = listOf(
@@ -1051,7 +850,52 @@ fun TestingPreview() {
                             )
                         )
                     )
-                )
+                ),
+
+                ServerRow(
+                    modifier = ServerModifier(paddingStart = 10f, paddingEnd = 10f, paddingTop = 10f, paddingBottom = 10f, height = 100f),
+                    items = listOf(
+                        ServerColumn(
+                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00", cornerRadius = 20f),
+                            items = listOf(
+                                ServerText(text = "Column Left"),
+                                ServerSpacer(),
+                                ServerText(text = "Column Left Description")
+                            )
+                        ),
+                        ServerSpacer(modifier = ServerModifier(width = 10f)),
+                        ServerColumn(
+                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00", cornerRadius = 20f),
+                            items = listOf(
+                                ServerText(text = "Column Right"),
+                                ServerSpacer(),
+                                ServerText(text = "Column Right Description")
+                            )
+                        )
+                    )
+                ),
+                ServerRow(
+                    modifier = ServerModifier(paddingStart = 10f, paddingEnd = 10f, paddingTop = 10f, paddingBottom = 10f, height = 100f),
+                    items = listOf(
+                        ServerColumn(
+                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00"),
+                            items = listOf(
+                                ServerText(text = "Column Left"),
+                                ServerSpacer(),
+                                ServerText(text = "Column Left Description")
+                            )
+                        ),
+                        ServerSpacer(),
+                        ServerColumn(
+                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00"),
+                            items = listOf(
+                                ServerText(text = "Column Right"),
+                                ServerSpacer(),
+                                ServerText(text = "Column Right Description")
+                            )
+                        )
+                    )
+                ),
             )
         )
     LazyColumn(
