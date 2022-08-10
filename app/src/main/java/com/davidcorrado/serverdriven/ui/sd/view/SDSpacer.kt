@@ -9,8 +9,10 @@ import com.davidcorrado.serverdriven.ui.sd.data.ServerSpacer
 
 @Composable
 fun SDSpacer(serverSpacer: ServerSpacer, scope: Any?) {
-    val serverModifier =
+    var serverModifier =
         (serverSpacer.modifier ?: ServerModifier())
-            .copy(weight = serverSpacer.modifier?.weight ?: 1f)
+    if (serverModifier.height == null && serverModifier.width == null) {
+        serverModifier = serverModifier.copy(weight = serverSpacer.modifier?.weight ?: 1f)
+    }
     Spacer(modifier = Modifier.toModifier(serverModifier, scope))
 }
