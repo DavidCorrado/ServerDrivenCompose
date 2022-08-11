@@ -51,6 +51,7 @@ fun TestingPreview() {
         ServerResponse(
             items = listOf(
                 ServerRow(
+                    spacing = 10f,
                     modifier = ServerModifier(
                         paddingStart = 10f,
                         paddingEnd = 10f,
@@ -67,37 +68,8 @@ fun TestingPreview() {
                                 ServerText(text = "Column Left Description")
                             )
                         ),
-                        ServerSpacer(modifier = ServerModifier(width = 10f)),
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00", cornerRadius = 20f),
-                            items = listOf(
-                                ServerText(text = "Column Right"),
-                                ServerSpacer(),
-                                ServerText(text = "Column Right Description")
-                            )
-                        )
-                    )
-                ),
-                ServerRow(
-                    modifier = ServerModifier(
-                        paddingStart = 10f,
-                        paddingEnd = 10f,
-                        paddingTop = 10f,
-                        paddingBottom = 10f,
-                        height = 100f
-                    ),
-                    items = listOf(
-                        ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00"),
-                            items = listOf(
-                                ServerText(text = "Column Left"),
-                                ServerSpacer(),
-                                ServerText(text = "Column Left Description")
-                            )
-                        ),
-                        ServerSpacer(),
-                        ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00"),
                             items = listOf(
                                 ServerText(text = "Column Right"),
                                 ServerSpacer(),
@@ -128,9 +100,9 @@ fun TestingPreview() {
                         )
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height =  10f)),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
-                    modifier = ServerModifier(height =  150f, backgroundColor = "#00ffff"),
+                    modifier = ServerModifier(height = 150f, backgroundColor = "#00ffff"),
                     items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
@@ -145,9 +117,9 @@ fun TestingPreview() {
                         )
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height =  10f)),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
-                    modifier = ServerModifier(height =  150f, backgroundColor = "#00ffff"),
+                    modifier = ServerModifier(height = 150f, backgroundColor = "#00ffff"),
                     items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
@@ -167,9 +139,9 @@ fun TestingPreview() {
                         )
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height =  10f)),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerColumn(
-                    modifier = ServerModifier(height =  150f, backgroundColor = "#00ffff"),
+                    modifier = ServerModifier(height = 150f, backgroundColor = "#00ffff"),
                     items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
@@ -190,7 +162,7 @@ fun TestingPreview() {
                         )
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height =  10f)),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
                     modifier = ServerModifier(
                         paddingStart = 20f,
@@ -203,15 +175,16 @@ fun TestingPreview() {
                     items = listOf(
                         ServerRow(
                             items = listOf(
-                                ServerRow(modifier = ServerModifier(
-                                    paddingStart = 20f,
-                                    paddingEnd = 20f,
-                                    paddingTop = 20f,
-                                    paddingBottom = 20f,
-                                    weight = 1f,
-                                    backgroundColor = "#00ff00",
-                                    cornerRadius = 20f
-                                ),
+                                ServerRow(
+                                    modifier = ServerModifier(
+                                        paddingStart = 20f,
+                                        paddingEnd = 20f,
+                                        paddingTop = 20f,
+                                        paddingBottom = 20f,
+                                        weight = 1f,
+                                        backgroundColor = "#00ff00",
+                                        cornerRadius = 20f
+                                    ),
                                     items = listOf(
                                         ServerText(text = "Row Border Background")
                                     )
@@ -220,7 +193,7 @@ fun TestingPreview() {
                         )
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height =  10f)),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
                     items = listOf(
                         ServerText(text = "Left 30", modifier = ServerModifier(weight = 0.3f, backgroundColor = "#ff0000")),
@@ -228,9 +201,9 @@ fun TestingPreview() {
                         ServerText(text = "Right 30", modifier = ServerModifier(weight = 0.3f, backgroundColor = "#0000ff")),
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height =  10f)),
+                ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerColumn(
-                    modifier = ServerModifier(height =  200f, backgroundColor = "#ffff00"),
+                    modifier = ServerModifier(height = 200f, backgroundColor = "#ffff00"),
                     items = listOf(
                         ServerText(text = "Top 25 is going to get really long", modifier = ServerModifier(weight = 0.25f, backgroundColor = "#ff0000")),
                         ServerText(text = "Mid 50 is going to get really long", modifier = ServerModifier(weight = 0.5f, backgroundColor = "#00ff00")),
@@ -532,45 +505,6 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     items = listOf(
-                        ServerColumn(
-                            items = listOf(
-                                ServerRow(
-                                    items = listOf(
-                                        ServerText(text = "Row/Col/Row Border Background"),
-                                    ),
-                                    modifier = ServerModifier(
-                                        weight = 1f,
-                                        paddingBottom = 20f,
-                                        paddingTop = 20f,
-                                        paddingStart = 20f,
-                                        paddingEnd = 20f,
-                                        backgroundColor = "#00ff00",
-                                        cornerRadius = 20f
-                                    )
-                                )
-                            ),
-                            modifier = ServerModifier(
-                                weight = 1f,
-                                paddingBottom = 20f,
-                                paddingTop = 20f,
-                                paddingStart = 20f,
-                                paddingEnd = 20f,
-                                backgroundColor = "#00ff00",
-                                cornerRadius = 20f
-                            )
-                        ),
-                    ),
-                    modifier = ServerModifier(
-                        paddingBottom = 20f,
-                        paddingTop = 20f,
-                        paddingStart = 20f,
-                        paddingEnd = 20f,
-                        backgroundColor = "#ff0000",
-                        cornerRadius = 20f
-                    )
-                ),
-                ServerRow(
-                    items = listOf(
                         ServerRow(
                             items = listOf(
                                 ServerText(text = "Row Border Background"),
@@ -665,7 +599,8 @@ fun TestingPreview() {
                                 paddingStart = 20f,
                                 paddingEnd = 20f,
                                 paddingTop = 20f,
-                                paddingBottom = 20f, backgroundColor = "#ff0000")
+                                paddingBottom = 20f, backgroundColor = "#ff0000"
+                            )
                         ),
                         ServerText(
                             text = "Mid 50",
@@ -674,7 +609,8 @@ fun TestingPreview() {
                                 paddingStart = 20f,
                                 paddingEnd = 20f,
                                 paddingTop = 20f,
-                                paddingBottom = 20f, backgroundColor = "#00ff00")
+                                paddingBottom = 20f, backgroundColor = "#00ff00"
+                            )
                         ),
                         ServerText(
                             text = "Right 30",
@@ -683,7 +619,8 @@ fun TestingPreview() {
                                 paddingStart = 20f,
                                 paddingEnd = 20f,
                                 paddingTop = 20f,
-                                paddingBottom = 20f, backgroundColor = "#0000ff")
+                                paddingBottom = 20f, backgroundColor = "#0000ff"
+                            )
                         )
                     )
                 ),
@@ -806,11 +743,10 @@ fun TestingPreview() {
                             )
                         ),
                     )
-
                 ),
                 ServerRow(
                     items = listOf(
-                        ServerSpacer(
+                        ServerRow(
                             modifier = ServerModifier(
                                 weight = 1f,
                                 backgroundColor = "#ff0000",
@@ -819,7 +755,8 @@ fun TestingPreview() {
                                 paddingEnd = 20f,
                                 paddingTop = 20f,
                                 paddingStart = 20f,
-                            )
+                            ),
+                            items = listOf()
                         )
                     )
                 ),
@@ -916,128 +853,7 @@ fun TestingPreview() {
                         ),
                     )
                 ),
-                ServerRow(
-                    modifier = ServerModifier(height = 150f, weight = 1f, backgroundColor = "#00ffff"),
-                    items = listOf(
-                        ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                            items = listOf(
-                                ServerRow(
-                                    modifier = ServerModifier(weight = 0.5f, backgroundColor = "#ff0000"),
-                                    items = listOf(
-                                        ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
-                                    )
-                                ),
-                                ServerRow(
-                                    modifier = ServerModifier(weight = 0.5f, backgroundColor = "#ff0000"),
-                                    items = listOf(
-                                        ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                ServerSpacer(modifier =  ServerModifier(height = 20f)),
-                ServerRow(
-                    modifier = ServerModifier(weight = 1f, backgroundColor= "#00ffff"),
-                    items = listOf(
-                        ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                            items = listOf(
-                                ServerRow(
-                                    modifier = ServerModifier(weight = 0.45f, backgroundColor = "#ff0000"),
-                                    items = listOf(
-                                        ServerColumn(
-                                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                                            items = listOf(
-                                                ServerText(text = "row/column/row/column/text", modifier = ServerModifier(backgroundColor = "#ffff00")),
-                                                ServerText(text = "row/column/row/column/text", modifier = ServerModifier(backgroundColor = "#ffff00")),
-                                                ServerText(text = "row/column/row/column/text", modifier  = ServerModifier(backgroundColor  = "#ffff00"))
-                                            )
-                                        )
-                                    )
-                                ),
-                                ServerSpacer(modifier = ServerModifier(weight = 0.1f)),
-                                ServerRow(
-                                    modifier = ServerModifier(weight = 0.45f, backgroundColor = "#ff0000"),
-                                    items = listOf(
-                                        ServerColumn(
-                                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                                            items = listOf(
-                                                ServerText(text = "row/column/row/column/text", modifier = ServerModifier(backgroundColor = "#ffff00")),
-                                                ServerText(text = "row/column/row/column/text", modifier = ServerModifier(backgroundColor = "#ffff00")),
-                                                ServerText(text = "row/column/row/column/text", modifier  = ServerModifier(backgroundColor  = "#ffff00"))
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                ServerSpacer(modifier =  ServerModifier(height = 20f)),
-                ServerBox(
-                    modifier = ServerModifier(weight = 1f),
-                    items = listOf(
-                        ServerImage(
-                            drawableRes = R.drawable.ic_background,
-                            modifier = ServerModifier(weight = 1f)
-                        ),
-                        ServerColumn(
-                            alignment = ServerAlignment.CENTER,
-                            items = listOf(
-                                ServerRow(
-                                    alignment = ServerAlignment.CENTER,
-                                    items = listOf(
-                                        ServerText(text = "Centered Text Alignment", color = "#ffffff")
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                ServerBox(
-                    modifier = ServerModifier(weight = 1f),
-                    items = listOf(
-                        ServerImage(
-                            drawableRes = R.drawable.ic_background,
-                            modifier = ServerModifier(weight = 1f)
-                        ),
-                        ServerColumn(
-                            modifier = ServerModifier(weight = 1f),
-                            alignment = ServerAlignment.CENTER,
-                            items = listOf(
-                                ServerRow(
-                                    modifier = ServerModifier(weight = 1f),
-                                    alignment = ServerAlignment.CENTER,
-                                    items = listOf(
-                                        ServerText(text = "Centered Text Alignment + Weight", color = "#ffffff")
-                                    )
-                                )
-                            )
-                        )
-                    )
-                ),
-                ServerBox(
-                    modifier = ServerModifier(weight = 1f),
-                    items = listOf(
-                        ServerImage(drawableRes = R.drawable.ic_background, modifier = ServerModifier(weight = 1f)),
-                        ServerColumn(
-                            items = listOf (
-                                ServerSpacer(),
-                                ServerRow(
-                                    items = listOf (
-                                        ServerSpacer(),
-                                        ServerText(text = "Centered Text Spacers", color = "#ffffff"),
-                                        ServerSpacer()
-                                    )
-                                ),
-                                ServerSpacer()
-                            )
-                        )
-                    )
-                )
+                ServerSpacer(modifier = ServerModifier(height = 20f))
             )
         )
     LazyColumn(
