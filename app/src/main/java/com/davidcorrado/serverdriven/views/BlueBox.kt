@@ -13,14 +13,14 @@ fun BlueBox() {
     val data =
         ServerResponse(
             items = listOf(
-                BlueCard()
+                blueCard()
             )
         )
     Log.v("DavidData", "DavidBlueBox" + data.toJson())
     SDContent(items = data.items)
 }
 
-fun BlueCard(): ServerBox {
+fun blueCard(): ServerBox {
     return ServerBox(
         modifier = ServerModifier(backgroundColor = "#002F8C", cornerRadius = 16f),
         items = listOf(
@@ -40,7 +40,7 @@ fun BlueCard(): ServerBox {
                     ServerRow(
                         items = listOf(
                             ServerImage(
-                                drawableRes = R.drawable.ic_arrow_left,
+                                drawableRes = R.drawable.ic_arrow_right,
                                 modifier = ServerModifier(width = 10f, height = 6f, paddingTop = 5f, paddingEnd = 5f)
                             ),
                             ServerText(text = "Some of the data you record in journeys will appear here, too.", size = 12, weight = "500", color = "#FFFFFF")
