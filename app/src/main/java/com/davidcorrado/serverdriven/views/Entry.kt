@@ -22,24 +22,24 @@ fun Entries() {
 
 fun Entry(): ServerCard {
     return ServerCard(
-        items = listOf(
+        subviews = listOf(
             ServerColumn(
                 modifier = ServerModifier(
-                    paddingStart = 20f,
-                    paddingEnd = 20f,
-                    paddingTop = 24f,
-                    paddingBottom = 24f
+                    spacingStart = 20f,
+                    spacingEnd = 20f,
+                    spacingTop = 24f,
+                    spacingBottom = 24f
                 ),
-                items = listOf(
+                subviews = listOf(
                     ServerRow(
                         alignment = ServerAlignment.CENTER,
-                        items = listOf(
+                        subviews = listOf(
                             ServerImage(
-                                drawableRes = R.drawable.ic_bp,
+                                url = R.drawable.ic_bp,
                                 modifier = ServerModifier(
                                     width = 18f,
                                     height = 18f,
-                                    paddingEnd = 7f
+                                    spacingEnd = 7f
                                 )
                             ),
                             ServerText(text = "Blood Pressure", size = 14, weight = "500"),
@@ -53,17 +53,17 @@ fun Entry(): ServerCard {
                         weight = "300",
                         size = 36,
                         color = "#002F8C",
-                        modifier = ServerModifier(paddingTop = 21f, paddingBottom = 15f)
+                        modifier = ServerModifier(spacingTop = 21f, spacingBottom = 15f)
                     ),
                     ServerRow(
                         alignment = ServerAlignment.CENTER,
-                        items = listOf(
+                        subviews = listOf(
                             ServerImage(
-                                drawableRes = R.drawable.ic_running,
+                                url = R.drawable.ic_running,
                                 modifier = ServerModifier(
                                     width = 20f,
                                     height = 20f,
-                                    paddingEnd = 8f
+                                    spacingEnd = 8f
                                 )
                             ),
                             ServerBubble(
@@ -75,7 +75,7 @@ fun Entry(): ServerCard {
                                     size = 12
                                 ),
                                 modifier = ServerModifier(
-                                    paddingEnd = 8f
+                                    spacingEnd = 8f
                                 )
                             ),
                             ServerText(text = "Per AHA guidelines", size = 12, weight = "500"),

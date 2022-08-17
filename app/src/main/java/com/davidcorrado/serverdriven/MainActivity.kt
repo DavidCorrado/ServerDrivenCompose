@@ -12,26 +12,26 @@ import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 import com.davidcorrado.serverdriven.ui.theme.ServerDrivenTheme
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val items = ServerResponse(
             listOf(
                 ServerCard(
-                    items = listOf(
+                    subviews = listOf(
                         ServerColumn(
                             modifier = ServerModifier(
-                                paddingStart = 20f,
-                                paddingEnd = 20f,
-                                paddingTop = 24f,
-                                paddingBottom = 24f
-                            ), items = listOf(
+                                spacingStart = 20f,
+                                spacingEnd = 20f,
+                                spacingTop = 24f,
+                                spacingBottom = 24f
+                            ),
+                            subviews = listOf(
                                 ServerRow(
                                     alignment = ServerAlignment.CENTER,
-                                    items = listOf(
+                                    subviews = listOf(
                                         ServerImage(
-                                            drawableRes = R.drawable.ic_streak,
+                                            url = R.drawable.ic_streak,
                                             modifier = ServerModifier(
                                                 width = 40f,
                                                 height = 40f,
@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
                                         ),
                                         ServerText(
                                             text = "Sleep",
-                                            modifier = ServerModifier(paddingStart = 7f)
+                                            modifier = ServerModifier(spacingStart = 7f)
                                         ),
                                         ServerSpacer(),
                                         ServerText(text = "Nov 1 "),
@@ -49,14 +49,14 @@ class MainActivity : ComponentActivity() {
                                 ),
                                 ServerText(
                                     text = "9h 15m",
-                                    modifier = ServerModifier(paddingTop = 20f)
+                                    modifier = ServerModifier(spacingTop = 20f)
                                 ),
                                 ServerRow(
                                     alignment = ServerAlignment.CENTER,
-                                    modifier = ServerModifier(paddingTop = 20f),
-                                    items = listOf(
+                                    modifier = ServerModifier(spacingTop = 20f),
+                                    subviews = listOf(
                                         ServerImage(
-                                            drawableRes = R.drawable.ic_streak,
+                                            url = R.drawable.ic_streak,
                                             modifier = ServerModifier(
                                                 width = 48f,
                                                 height = 48f,
@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
                                         ),
                                         ServerText(
                                             text = "Average Sleep",
-                                            modifier = ServerModifier(paddingStart = 16f)
+                                            modifier = ServerModifier(spacingStart = 16f)
                                         ),
                                         ServerBubble(
                                             text = ServerText(text = "Bubble"),
@@ -79,7 +79,6 @@ class MainActivity : ComponentActivity() {
                 )
             )
         )
-
 
         setContent {
             ServerDrivenTheme() {

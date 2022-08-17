@@ -6,5 +6,5 @@ import com.squareup.moshi.JsonClass
 data class ServerBox(
     val type: ServerItemType = ServerItemType.BOX,
     val modifier: ServerModifier? = null,
-    val items: List<Any>
+    val subviews: List<Any>
 )

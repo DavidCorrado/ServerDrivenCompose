@@ -9,22 +9,22 @@ fun SDContent(item: Any?, scope: Any? = null) {
     when (item) {
         is ServerCard -> {
             SDCard(item, scope) {
-                SDContent(items = item.items, scope = scope)
+                SDContent(items = item.subviews, scope = scope)
             }
         }
         is ServerColumn -> {
             SDColumn(item, scope) {
-                SDContent(items = item.items, scope = this)
+                SDContent(items = item.subviews, scope = this)
             }
         }
         is ServerRow -> {
             SDRow(item, scope) {
-                SDContent(items = item.items, scope = this)
+                SDContent(items = item.subviews, scope = this)
             }
         }
         is ServerBox -> {
             SDBox(item, scope) {
-                SDContent(items = item.items, scope = this)
+                SDContent(items = item.subviews, scope = this)
             }
         }
         is ServerImage -> {

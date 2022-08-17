@@ -6,5 +6,5 @@ import com.squareup.moshi.JsonClass
 data class ServerCard(
     val type: ServerItemType = ServerItemType.CARD,
     val modifier: ServerModifier? = null,
-    val items: List<Any>
+    val subviews: List<Any>
 )

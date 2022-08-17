@@ -51,16 +51,16 @@ fun Modifier.toModifier(serverModifier: ServerModifier?, scope: Any?): Modifier 
         .modifyIf(serverModifier?.width != null) {
             width(
                 Dp(
-                    serverModifier?.width!! + (serverModifier.paddingStart
-                        ?: 0f) + (serverModifier.paddingEnd ?: 0f)
+                    serverModifier?.width!! + (serverModifier.spacingStart
+                        ?: 0f) + (serverModifier.spacingEnd ?: 0f)
                 )
             )
         }
         .modifyIf(serverModifier?.height != null) {
             height(
                 Dp(
-                    serverModifier?.height!! + (serverModifier.paddingTop
-                        ?: 0f) + (serverModifier.paddingBottom ?: 0f)
+                    serverModifier?.height!! + (serverModifier.spacingTop
+                        ?: 0f) + (serverModifier.spacingBottom ?: 0f)
                 )
             )
         }
@@ -76,8 +76,8 @@ fun Modifier.toModifier(serverModifier: ServerModifier?, scope: Any?): Modifier 
             )
         }
         .modifyIf(serverModifier?.cornerRadius != null) { clip(RoundedCornerShape(Dp(serverModifier?.cornerRadius!!))) }
-        .modifyIf(serverModifier?.paddingStart != null) { padding(start = Dp(serverModifier?.paddingStart!!)) }
-        .modifyIf(serverModifier?.paddingEnd != null) { padding(end = Dp(serverModifier?.paddingEnd!!)) }
-        .modifyIf(serverModifier?.paddingTop != null) { padding(top = Dp(serverModifier?.paddingTop!!)) }
-        .modifyIf(serverModifier?.paddingBottom != null) { padding(bottom = Dp(serverModifier?.paddingBottom!!)) }
+        .modifyIf(serverModifier?.spacingStart != null) { padding(start = Dp(serverModifier?.spacingStart!!)) }
+        .modifyIf(serverModifier?.spacingEnd != null) { padding(end = Dp(serverModifier?.spacingEnd!!)) }
+        .modifyIf(serverModifier?.spacingTop != null) { padding(top = Dp(serverModifier?.spacingTop!!)) }
+        .modifyIf(serverModifier?.spacingBottom != null) { padding(bottom = Dp(serverModifier?.spacingBottom!!)) }
 }

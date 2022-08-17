@@ -18,7 +18,7 @@ fun Counters() {
             items = listOf(
                 ServerRow(
                     spacing = 10f,
-                    items = listOf(leftCounter, rightCounter)
+                    subviews = listOf(leftCounter, rightCounter)
                 )
             )
         )
@@ -28,16 +28,16 @@ fun Counters() {
 
 fun counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
     return ServerColumn(
-        modifier = ServerModifier(weight = 1f, backgroundColor = "#F5F5F5", cornerRadius = 16f), items = listOf(
+        modifier = ServerModifier(weight = 1f, backgroundColor = "#F5F5F5", cornerRadius = 16f), subviews = listOf(
             ServerText(
                 text = count.toString(),
                 color = "#002F8C",
                 size = 32,
                 weight = "300",
-                modifier = ServerModifier(paddingStart = 18f, paddingTop = 18f)
+                modifier = ServerModifier(spacingStart = 18f, spacingTop = 18f)
             ),
             ServerRow(
-                alignment = ServerAlignment.CENTER, items = listOf(
+                alignment = ServerAlignment.CENTER, subviews = listOf(
                     ServerText(
                         text = label,
                         size = 12,
@@ -45,18 +45,18 @@ fun counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
                     ),
                     ServerSpacer(),
                     ServerImage(
-                        drawableRes = image,
+                        url = image,
                         modifier = ServerModifier(
                             width = 33f,
                             height = 33f,
-                            paddingStart = 8f
+                            spacingStart = 8f
                         )
                     )
                 ),
                 modifier = ServerModifier(
-                    paddingStart = 18f,
-                    paddingBottom = 14f,
-                    paddingEnd = 14f
+                    spacingStart = 18f,
+                    spacingBottom = 14f,
+                    spacingEnd = 14f
                 )
             )
         )

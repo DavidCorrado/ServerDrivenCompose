@@ -8,5 +8,5 @@ data class ServerRow(
     val spacing: Float? = null,
     val modifier: ServerModifier? = null,
     val alignment: ServerAlignment? = null,
-    val items: List<Any>
+    val subviews: List<Any>
 )

@@ -15,7 +15,7 @@ import com.davidcorrado.serverdriven.ui.sd.data.ServerImage
 fun SDImage(serverImage: ServerImage, scope: Any?) {
     Image(
         alignment = serverImage.alignment?.alignment ?: Alignment.Center,
-        painter = painterResource(serverImage.drawableRes),
+        painter = painterResource(serverImage.url),
         contentDescription = null,
         colorFilter = serverImage.tint?.let { ColorFilter.tint(it.toColor()) },
         contentScale = serverImage.contentScale?.contentScale ?: ContentScale.Fit,

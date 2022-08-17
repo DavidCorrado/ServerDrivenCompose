@@ -1,6 +1,5 @@
 package com.davidcorrado.serverdriven.ui.sd.data
 
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -29,7 +28,7 @@ data class ServerText(
             fontWeight = FontWeight(weight?.toInt() ?: DEFAULT_WEIGHT.toInt()),
             fontSize = (size ?: DEFAULT_SIZE).sp,
             fontStyle = style?.fontStyle ?: FontType.NORMAL.fontStyle,
-            color = (color?:"#4C5870").toColor(),
+            color = (color ?: "#4C5870").toColor(),
             textDecoration = decoration?.let { decoration -> TextDecoration.combine(decoration.map { it.textDecoration }) }
         )
 

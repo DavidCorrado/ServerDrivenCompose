@@ -14,7 +14,7 @@ fun HistoryPreview() {
         ServerResponse(
             items = listOf(
                 ServerColumn(
-                    items = listOf(
+                    subviews = listOf(
                         history1(),
                         history2()
                     )
@@ -28,20 +28,20 @@ fun HistoryPreview() {
 fun history1(): ServerColumn {
     return ServerColumn(
         modifier = ServerModifier(
-            paddingStart = 20f, paddingEnd = 20f, paddingTop = 16f, paddingBottom = 16f,
+            spacingStart = 20f, spacingEnd = 20f, spacingTop = 16f, spacingBottom = 16f,
         ),
-        items = listOf(
+        subviews = listOf(
             ServerRow(
                 alignment = ServerAlignment.CENTER,
-                items = listOf(
+                subviews = listOf(
                     ServerColumn(
                         modifier = ServerModifier(
                             weight = 1f
                         ),
-                        items = listOf(
+                        subviews = listOf(
                             ServerRow(
                                 alignment = ServerAlignment.CENTER,
-                                items = listOf(
+                                subviews = listOf(
                                     ServerText(text = "45m", size = 18, weight = "500"),
                                     ServerSpacer(),
                                     ServerText(text = "Nov 1", size = 12, weight = "500"),
@@ -49,16 +49,16 @@ fun history1(): ServerColumn {
                             ),
                             ServerRow(
                                 modifier = ServerModifier(
-                                    paddingTop = 4f,
+                                    spacingTop = 4f,
                                 ),
                                 alignment = ServerAlignment.CENTER,
-                                items = listOf(
+                                subviews = listOf(
                                     ServerImage(
-                                        drawableRes = R.drawable.ic_running,
+                                        url = R.drawable.ic_running,
                                         modifier = ServerModifier(
                                             width = 14f,
                                             height = 14f,
-                                            paddingEnd = 8f,
+                                            spacingEnd = 8f,
                                         ),
                                     ),
                                     ServerBubble(
@@ -70,7 +70,7 @@ fun history1(): ServerColumn {
                                             size = 12,
                                         ),
                                         modifier = ServerModifier(
-                                            paddingEnd = 8f,
+                                            spacingEnd = 8f,
                                         ),
                                     ),
                                     ServerText(
@@ -85,9 +85,9 @@ fun history1(): ServerColumn {
                         ),
                     ),
                     ServerImage(
-                        drawableRes = R.drawable.ic_chevron,
+                        url = R.drawable.ic_chevron,
                         modifier = ServerModifier(
-                            paddingStart = 36f,
+                            spacingStart = 36f,
                             width = 5f,
                             height = 11f,
                         ),
@@ -101,27 +101,27 @@ fun history1(): ServerColumn {
 fun history2(): ServerColumn {
     return ServerColumn(
         modifier = ServerModifier(
-            paddingStart = 20f, paddingEnd = 20f, paddingTop = 16f, paddingBottom = 16f,
+            spacingStart = 20f, spacingEnd = 20f, spacingTop = 16f, spacingBottom = 16f,
         ),
-        items = listOf(
+        subviews = listOf(
             ServerRow(
                 alignment = ServerAlignment.CENTER,
-                items = listOf(
+                subviews = listOf(
                     ServerRow(
                         alignment = ServerAlignment.CENTER,
                         modifier = ServerModifier(
                             weight = 1f
                         ),
-                        items = listOf(
+                        subviews = listOf(
                             ServerRow(
                                 alignment = ServerAlignment.CENTER,
-                                items = listOf(
+                                subviews = listOf(
                                     ServerImage(
-                                        drawableRes = R.drawable.ic_disappointed,
+                                        url = R.drawable.ic_disappointed,
                                         modifier = ServerModifier(
                                             width = 24f,
                                             height = 22f,
-                                            paddingEnd = 10f,
+                                            spacingEnd = 10f,
                                         ),
                                     ),
                                     ServerText(
@@ -133,17 +133,17 @@ fun history2(): ServerColumn {
                             ServerSpacer(),
                             ServerColumn(
                                 alignment = ServerAlignment.END,
-                                items = listOf(
-                                    ServerText(text = "Nov 1", size = 12, weight = "500", modifier = ServerModifier(paddingBottom = 8f)),
+                                subviews = listOf(
+                                    ServerText(text = "Nov 1", size = 12, weight = "500", modifier = ServerModifier(spacingBottom = 8f)),
                                     ServerText(text = "10:45 AM", size = 12, weight = "700"),
                                 ),
                             ),
                         ),
                     ),
                     ServerImage(
-                        drawableRes = R.drawable.ic_chevron,
+                        url = R.drawable.ic_chevron,
                         modifier = ServerModifier(
-                            paddingStart = 36f,
+                            spacingStart = 36f,
                             width = 5f,
                             height = 11f,
                         ),
