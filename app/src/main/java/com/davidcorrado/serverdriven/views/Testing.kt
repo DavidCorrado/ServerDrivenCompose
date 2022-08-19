@@ -61,7 +61,7 @@ fun TestingPreview() {
                     ),
                     items = listOf(
                         ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00", cornerRadius = 20f),
+                            modifier = ServerModifier(weight = 0.5f, backgroundColor = "#00FF00", cornerRadius = 20f),
                             items = listOf(
                                 ServerText(text = "Column Left"),
                                 ServerSpacer(),
@@ -69,7 +69,7 @@ fun TestingPreview() {
                             )
                         ),
                         ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00", cornerRadius = 20f),
+                            modifier = ServerModifier(weight = 0.5f, backgroundColor = "#00FF00", cornerRadius = 20f),
                             items = listOf(
                                 ServerText(text = "Column Right"),
                                 ServerSpacer(),
@@ -853,7 +853,37 @@ fun TestingPreview() {
                         ),
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height = 20f))
+                ServerSpacer(modifier = ServerModifier(height = 20f)),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FILL_WIDTH,
+                    alignment = ImageAlignment.CENTER_CENTER,
+                    modifier = ServerModifier(width = 100f, height = 100f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FILL_HEIGHT,
+                    alignment = ImageAlignment.CENTER_END,
+                    modifier = ServerModifier(width = 100f, height = 200f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.CROP,
+                    alignment = ImageAlignment.CENTER_END,
+                    modifier = ServerModifier(width = 100f, height = 100f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FIT,
+                    alignment = ImageAlignment.CENTER_CENTER,
+                    modifier = ServerModifier(width = 100f, height = 100f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FILL_WIDTH,
+                    alignment = ImageAlignment.CENTER_CENTER,
+                    modifier = ServerModifier(width = 200f, height = 100f)
+                )
             )
         )
     LazyColumn(
