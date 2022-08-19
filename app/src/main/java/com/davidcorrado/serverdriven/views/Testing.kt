@@ -53,24 +53,24 @@ fun TestingPreview() {
                 ServerRow(
                     spacing = 10f,
                     modifier = ServerModifier(
-                        spacingStart = 10f,
-                        spacingEnd = 10f,
-                        spacingTop = 10f,
-                        spacingBottom = 10f,
+                        paddingStart = 10f,
+                        paddingEnd = 10f,
+                        paddingTop = 10f,
+                        paddingBottom = 10f,
                         height = 100f
                     ),
-                    subviews = listOf(
+                    items = listOf(
                         ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00", cornerRadius = 20f),
-                            subviews = listOf(
+                            modifier = ServerModifier(weight = 0.5f, backgroundColor = "#00FF00", cornerRadius = 20f),
+                            items = listOf(
                                 ServerText(text = "Column Left"),
                                 ServerSpacer(),
                                 ServerText(text = "Column Left Description")
                             )
                         ),
                         ServerColumn(
-                            modifier = ServerModifier(weight = 1f, backgroundColor = "#00FF00", cornerRadius = 20f),
-                            subviews = listOf(
+                            modifier = ServerModifier(weight = 0.5f, backgroundColor = "#00FF00", cornerRadius = 20f),
+                            items = listOf(
                                 ServerText(text = "Column Right"),
                                 ServerSpacer(),
                                 ServerText(text = "Column Right Description")
@@ -80,19 +80,19 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     modifier = ServerModifier(height = 150f, backgroundColor = "#00ffff"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                            subviews = listOf(
+                            items = listOf(
                                 ServerRow(
                                     modifier = ServerModifier(weight = 0.5f, backgroundColor = "#ff0000"),
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
                                     )
                                 ),
                                 ServerRow(
                                     modifier = ServerModifier(weight = 0.5f, backgroundColor = "#0000ff"),
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
                                     )
                                 )
@@ -103,13 +103,13 @@ fun TestingPreview() {
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
                     modifier = ServerModifier(height = 150f, backgroundColor = "#00ffff"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                            subviews = listOf(
+                            items = listOf(
                                 ServerRow(
                                     modifier = ServerModifier(weight = 0.5f, backgroundColor = "#ff0000"),
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
                                     )
                                 ),
@@ -120,16 +120,16 @@ fun TestingPreview() {
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
                     modifier = ServerModifier(height = 150f, backgroundColor = "#00ffff"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                            subviews = listOf(
+                            items = listOf(
                                 ServerRow(
                                     modifier = ServerModifier(weight = 0.5f, backgroundColor = "#ff00ff"),
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerColumn(
                                             modifier = ServerModifier(weight = 0.5f, backgroundColor = "#ff0000"),
-                                            subviews = listOf(
+                                            items = listOf(
                                                 ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
                                             )
                                         )
@@ -142,19 +142,19 @@ fun TestingPreview() {
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerColumn(
                     modifier = ServerModifier(height = 150f, backgroundColor = "#00ffff"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerColumn(
                             modifier = ServerModifier(weight = 1f, backgroundColor = "#00ff00"),
-                            subviews = listOf(
+                            items = listOf(
                                 ServerRow(
                                     modifier = ServerModifier(weight = 0.5f, backgroundColor = "#ff0000"),
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
                                     )
                                 ),
                                 ServerRow(
                                     modifier = ServerModifier(weight = 0.5f, backgroundColor = "#0000ff"),
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(text = "row/column/row/text", modifier = ServerModifier(backgroundColor = "#ffff00"))
                                     )
                                 )
@@ -165,27 +165,27 @@ fun TestingPreview() {
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
                     modifier = ServerModifier(
-                        spacingStart = 20f,
-                        spacingEnd = 20f,
-                        spacingTop = 20f,
-                        spacingBottom = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
+                        paddingTop = 20f,
+                        paddingBottom = 20f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 20f
                     ),
-                    subviews = listOf(
+                    items = listOf(
                         ServerRow(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerRow(
                                     modifier = ServerModifier(
-                                        spacingStart = 20f,
-                                        spacingEnd = 20f,
-                                        spacingTop = 20f,
-                                        spacingBottom = 20f,
+                                        paddingStart = 20f,
+                                        paddingEnd = 20f,
+                                        paddingTop = 20f,
+                                        paddingBottom = 20f,
                                         weight = 1f,
                                         backgroundColor = "#00ff00",
                                         cornerRadius = 20f
                                     ),
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(text = "Row Border Background")
                                     )
                                 )
@@ -195,7 +195,7 @@ fun TestingPreview() {
                 ),
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Left 30", modifier = ServerModifier(weight = 0.3f, backgroundColor = "#ff0000")),
                         ServerText(text = "Mid 50", modifier = ServerModifier(weight = 0.5f, backgroundColor = "#00ff00")),
                         ServerText(text = "Right 30", modifier = ServerModifier(weight = 0.3f, backgroundColor = "#0000ff")),
@@ -204,14 +204,14 @@ fun TestingPreview() {
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerColumn(
                     modifier = ServerModifier(height = 200f, backgroundColor = "#ffff00"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Top 25 is going to get really long", modifier = ServerModifier(weight = 0.25f, backgroundColor = "#ff0000")),
                         ServerText(text = "Mid 50 is going to get really long", modifier = ServerModifier(weight = 0.5f, backgroundColor = "#00ff00")),
                         ServerText(text = "Bottom 25 is going to get really long", modifier = ServerModifier(weight = 0.25f, backgroundColor = "#0000ff")),
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Read Me"),
                         ServerText(
                             text = "Do Not Read",
@@ -219,7 +219,7 @@ fun TestingPreview() {
                         ),
                         ServerText(text = "Read me Heading", isHeading = true),
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            drawableRes = R.drawable.ic_disappointed,
                             modifier = ServerModifier(
                                 adaText = "Disappointed",
                                 height = 20f,
@@ -227,14 +227,14 @@ fun TestingPreview() {
                             )
                         ),
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            drawableRes = R.drawable.ic_disappointed,
                             modifier = ServerModifier(height = 20f, width = 20f)
                         )
                     )
                 ),
                 ServerRow(
                     modifier = ServerModifier(adaText = "Read Me"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Don't Read"),
                         ServerText(
                             text = "Don't Read",
@@ -243,21 +243,21 @@ fun TestingPreview() {
                     )
                 ),
                 ServerCard(
-                    subviews = listOf(ServerText(text = "Card"))
+                    items = listOf(ServerText(text = "Card"))
                 ),
                 ServerCard(
-                    subviews = listOf(ServerText(text = "Card Padding")),
+                    items = listOf(ServerText(text = "Card Padding")),
                     modifier = ServerModifier(
-                        spacingStart = 30f,
-                        spacingEnd = 30f,
-                        spacingTop = 30f,
-                        spacingBottom = 30f
+                        paddingStart = 30f,
+                        paddingEnd = 30f,
+                        paddingTop = 30f,
+                        paddingBottom = 30f
                     )
                 ),
                 ServerCard(
-                    subviews = listOf(
+                    items = listOf(
                         ServerColumn(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerText(text = "Card Padding HW"),
                                 ServerText(text = "Card 2")
                             )
@@ -266,15 +266,15 @@ fun TestingPreview() {
                     modifier = ServerModifier(
                         width = 200f,
                         height = 200f,
-                        spacingStart = 30f,
-                        spacingEnd = 30f,
-                        spacingTop = 30f,
-                        spacingBottom = 30f
+                        paddingStart = 30f,
+                        paddingEnd = 30f,
+                        paddingTop = 30f,
+                        paddingBottom = 30f
                     )
                 ),
                 ServerColumn(
                     alignment = ServerAlignment.CENTER,
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Column Center"),
                     ),
                     modifier = ServerModifier(
@@ -286,7 +286,7 @@ fun TestingPreview() {
                 ),
                 ServerColumn(
                     alignment = ServerAlignment.END,
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Column End"),
                     ),
                     modifier = ServerModifier(
@@ -298,7 +298,7 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     alignment = ServerAlignment.CENTER,
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Row Center"),
                     ),
                     modifier = ServerModifier(
@@ -310,7 +310,7 @@ fun TestingPreview() {
                 ),
                 ServerRow(
                     alignment = ServerAlignment.END,
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Row End"),
                     ),
                     modifier = ServerModifier(
@@ -321,7 +321,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Row Padding HW"),
                         ServerText(text = "Row 2")
                     ),
@@ -329,31 +329,31 @@ fun TestingPreview() {
                     modifier = ServerModifier(
                         width = 200f,
                         height = 200f,
-                        spacingStart = 30f,
-                        spacingEnd = 30f,
-                        spacingTop = 30f,
-                        spacingBottom = 30f,
+                        paddingStart = 30f,
+                        paddingEnd = 30f,
+                        paddingTop = 30f,
+                        paddingBottom = 30f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 5f
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Row Padding HW"),
                         ServerText(text = "Row 2")
                     ),
                     spacing = 20f,
                     modifier = ServerModifier(
-                        spacingStart = 30f,
-                        spacingEnd = 30f,
-                        spacingTop = 30f,
-                        spacingBottom = 30f,
+                        paddingStart = 30f,
+                        paddingEnd = 30f,
+                        paddingTop = 30f,
+                        paddingBottom = 30f,
                         backgroundColor = "#ffff00",
                         cornerRadius = 5f
                     )
                 ),
                 ServerColumn(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Col Padding HW"),
                         ServerText(text = "Col 2")
                     ),
@@ -361,43 +361,43 @@ fun TestingPreview() {
                     modifier = ServerModifier(
                         width = 200f,
                         height = 200f,
-                        spacingStart = 30f,
-                        spacingEnd = 30f,
-                        spacingTop = 30f,
-                        spacingBottom = 30f,
+                        paddingStart = 30f,
+                        paddingEnd = 30f,
+                        paddingTop = 30f,
+                        paddingBottom = 30f,
                         backgroundColor = "#00ff00",
                         cornerRadius = 5f
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Row"),
                         ServerColumn(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerText(text = "Col Padding HW"),
                                 ServerText(text = "Col 2")
                             ),
                             modifier = ServerModifier(
-                                spacingStart = 30f,
-                                spacingEnd = 30f,
-                                spacingTop = 30f,
-                                spacingBottom = 30f,
+                                paddingStart = 30f,
+                                paddingEnd = 30f,
+                                paddingTop = 30f,
+                                paddingBottom = 30f,
                                 backgroundColor = "#00ff00",
                                 cornerRadius = 5f
                             )
                         )
                     ),
                     modifier = ServerModifier(
-                        spacingStart = 30f,
-                        spacingEnd = 30f,
-                        spacingTop = 30f,
-                        spacingBottom = 30f,
+                        paddingStart = 30f,
+                        paddingEnd = 30f,
+                        paddingTop = 30f,
+                        paddingBottom = 30f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 5f
                     )
                 ),
                 ServerColumn(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Col Spacer"),
                         ServerSpacer(),
                         ServerText(text = "Col Spacer")
@@ -410,7 +410,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(text = "Row Spacer"),
                         ServerSpacer(),
                         ServerText(text = "Row Spacer")
@@ -423,16 +423,16 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerRow(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerText(text = "Row Border Background"),
                             ),
                             modifier = ServerModifier(
-                                spacingBottom = 20f,
-                                spacingTop = 20f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
                                 width = 200f,
                                 height = 200f,
                                 backgroundColor = "#00ff00",
@@ -443,78 +443,78 @@ fun TestingPreview() {
                     modifier = ServerModifier(
                         width = 200f,
                         height = 200f,
-                        spacingBottom = 20f,
-                        spacingTop = 20f,
-                        spacingStart = 20f,
-                        spacingEnd = 20f,
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 20f
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerRow(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerText(text = "Row Border Background"),
                             ),
                             modifier = ServerModifier(
                                 weight = 1f,
-                                spacingBottom = 20f,
-                                spacingTop = 20f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
                                 backgroundColor = "#00ff00",
                                 cornerRadius = 20f
                             )
                         ),
                     ),
                     modifier = ServerModifier(
-                        spacingBottom = 20f,
-                        spacingTop = 20f,
-                        spacingStart = 20f,
-                        spacingEnd = 20f,
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 20f
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerColumn(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerText(text = "Column Border Background"),
                             ),
                             modifier = ServerModifier(
                                 weight = 1f,
-                                spacingBottom = 20f,
-                                spacingTop = 20f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
                                 backgroundColor = "#00ff00",
                                 cornerRadius = 20f
                             )
                         ),
                     ),
                     modifier = ServerModifier(
-                        spacingBottom = 20f,
-                        spacingTop = 20f,
-                        spacingStart = 20f,
-                        spacingEnd = 20f,
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 20f
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerRow(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerText(text = "Row Border Background"),
                             ),
                             modifier = ServerModifier(
                                 weight = 0.25f,
-                                spacingBottom = 20f,
-                                spacingTop = 20f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
+                                paddingBottom = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
                                 backgroundColor = "#00ff00",
                                 cornerRadius = 20f
                             )
@@ -522,16 +522,16 @@ fun TestingPreview() {
                     ),
                     modifier = ServerModifier(
                         weight = 1f,
-                        spacingBottom = 20f,
-                        spacingTop = 20f,
-                        spacingStart = 20f,
-                        spacingEnd = 20f,
+                        paddingBottom = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
+                        paddingEnd = 20f,
                         backgroundColor = "#ff0000",
                         cornerRadius = 20f
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerSpacer(
                             modifier = ServerModifier(
                                 weight = 1f,
@@ -542,7 +542,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerSpacer(),
                         ServerSpacer(
                             modifier = ServerModifier(
@@ -555,26 +555,26 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            drawableRes = R.drawable.ic_disappointed,
                             modifier = ServerModifier(height = 20f, width = 20f)
                         ),
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            drawableRes = R.drawable.ic_disappointed,
                             modifier = ServerModifier(
                                 height = 20f,
                                 width = 20f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
-                                spacingTop = 20f,
-                                spacingBottom = 20f
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 20f,
+                                paddingBottom = 20f
                             )
                         ),
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(
                             text = "Left 30",
                             modifier = ServerModifier(weight = .3f, backgroundColor = "#ff0000")
@@ -591,45 +591,45 @@ fun TestingPreview() {
                 ),
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(
                             text = "Left 30",
                             modifier = ServerModifier(
                                 weight = .3f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
-                                spacingTop = 20f,
-                                spacingBottom = 20f, backgroundColor = "#ff0000"
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 20f,
+                                paddingBottom = 20f, backgroundColor = "#ff0000"
                             )
                         ),
                         ServerText(
                             text = "Mid 50",
                             modifier = ServerModifier(
                                 weight = .5f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
-                                spacingTop = 20f,
-                                spacingBottom = 20f, backgroundColor = "#00ff00"
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 20f,
+                                paddingBottom = 20f, backgroundColor = "#00ff00"
                             )
                         ),
                         ServerText(
                             text = "Right 30",
                             modifier = ServerModifier(
                                 weight = .3f,
-                                spacingStart = 20f,
-                                spacingEnd = 20f,
-                                spacingTop = 20f,
-                                spacingBottom = 20f, backgroundColor = "#0000ff"
+                                paddingStart = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 20f,
+                                paddingBottom = 20f, backgroundColor = "#0000ff"
                             )
                         )
                     )
                 ),
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerRow(
                             modifier = ServerModifier(width = 200f),
-                            subviews = listOf(
+                            items = listOf(
                                 ServerText(
                                     text = "Left 30 is going to get really long",
                                     modifier = ServerModifier(
@@ -658,7 +658,7 @@ fun TestingPreview() {
                 ServerSpacer(modifier = ServerModifier(height = 10f)),
                 ServerRow(
                     modifier = ServerModifier(weight = 1f, backgroundColor = "#ffff00"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(
                             text = "Left 30 is going to get really long",
                             modifier = ServerModifier(weight = .3f, backgroundColor = "#ff0000")
@@ -677,7 +677,7 @@ fun TestingPreview() {
                 ServerColumn( // This case also fails on iOS, dynamic sized view with weights in container direction
                     // View frames broken on iOS, does not render at all on android
                     modifier = ServerModifier(weight = 1f, backgroundColor = "#ffff00"),
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(
                             text = "Top 30 is going to get really long",
                             modifier = ServerModifier(weight = .3f, backgroundColor = "#ff0000")
@@ -697,7 +697,7 @@ fun TestingPreview() {
                     modifier = ServerModifier(weight = 1f, height = 200f, backgroundColor = "#ffff00"),
                     // Even the with weight = 1f column does not fill screen horizontally
                     // Maybe this should be embedded in a row on android
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(
                             text = "Top 30 is going to get really long",
                             modifier = ServerModifier(weight = .3f, backgroundColor = "#ff0000")
@@ -713,7 +713,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerCard(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(
                             text = "Card BG",
                             modifier = ServerModifier(backgroundColor = "#ff0000")
@@ -722,14 +722,14 @@ fun TestingPreview() {
                     modifier = ServerModifier(
                         backgroundColor = "#ff0000",
                         cornerRadius = 60f,
-                        spacingBottom = 20f,
-                        spacingEnd = 20f,
-                        spacingTop = 20f,
-                        spacingStart = 20f,
+                        paddingBottom = 20f,
+                        paddingEnd = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerText(
                             text = "Text is going to get really long.Left 30 is going to get really long",
                             modifier = ServerModifier(
@@ -745,18 +745,18 @@ fun TestingPreview() {
                     )
                 ),
                 ServerRow(
-                    subviews = listOf(
+                    items = listOf(
                         ServerRow(
                             modifier = ServerModifier(
                                 weight = 1f,
                                 backgroundColor = "#ff0000",
                                 cornerRadius = 60f,
-                                spacingBottom = 20f,
-                                spacingEnd = 20f,
-                                spacingTop = 20f,
-                                spacingStart = 20f,
+                                paddingBottom = 20f,
+                                paddingEnd = 20f,
+                                paddingTop = 20f,
+                                paddingStart = 20f,
                             ),
-                            subviews = listOf()
+                            items = listOf()
                         )
                     )
                 ),
@@ -765,25 +765,25 @@ fun TestingPreview() {
                     modifier = ServerModifier(
                         backgroundColor = "#ff0000",
                         cornerRadius = 60f,
-                        spacingBottom = 20f,
-                        spacingEnd = 20f,
-                        spacingTop = 20f,
-                        spacingStart = 20f,
+                        paddingBottom = 20f,
+                        paddingEnd = 20f,
+                        paddingTop = 20f,
+                        paddingStart = 20f,
                     )
                 ),
                 ServerImage(
-                    url = R.drawable.ic_running,
+                    drawableRes = R.drawable.ic_running,
                     tint = "#FF0000",
                     modifier = ServerModifier(height = 20f, width = 20f)
                 ),
                 ServerColumn(
-                    subviews = listOf(
+                    items = listOf(
                         ServerBox(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerRow(
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerImage(
-                                            url = R.drawable.ic_background,
+                                            drawableRes = R.drawable.ic_background,
                                             alignment = ImageAlignment.TOP_END,
                                             modifier = ServerModifier(
                                                 weight = 1f,
@@ -794,7 +794,7 @@ fun TestingPreview() {
                                     )
                                 ),
                                 ServerColumn(
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(
                                             text = "Overlay",
                                             modifier = ServerModifier(backgroundColor = "#FF0000")
@@ -816,13 +816,13 @@ fun TestingPreview() {
                     )
                 ),
                 ServerColumn(
-                    subviews = listOf(
+                    items = listOf(
                         ServerBox(
-                            subviews = listOf(
+                            items = listOf(
                                 ServerRow(
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerImage(
-                                            url = R.drawable.ic_background,
+                                            drawableRes = R.drawable.ic_background,
                                             alignment = ImageAlignment.BOTTOM_END,
                                             modifier = ServerModifier(
                                                 weight = 1f,
@@ -833,7 +833,7 @@ fun TestingPreview() {
                                     )
                                 ),
                                 ServerRow(
-                                    subviews = listOf(
+                                    items = listOf(
                                         ServerText(
                                             text = "Overlay",
                                             modifier = ServerModifier(backgroundColor = "#FF0000")
@@ -853,7 +853,37 @@ fun TestingPreview() {
                         ),
                     )
                 ),
-                ServerSpacer(modifier = ServerModifier(height = 20f))
+                ServerSpacer(modifier = ServerModifier(height = 20f)),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FILL_WIDTH,
+                    alignment = ImageAlignment.CENTER_CENTER,
+                    modifier = ServerModifier(width = 100f, height = 100f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FILL_HEIGHT,
+                    alignment = ImageAlignment.CENTER_END,
+                    modifier = ServerModifier(width = 100f, height = 200f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.CROP,
+                    alignment = ImageAlignment.CENTER_END,
+                    modifier = ServerModifier(width = 100f, height = 100f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FIT,
+                    alignment = ImageAlignment.CENTER_CENTER,
+                    modifier = ServerModifier(width = 100f, height = 100f)
+                ),
+                ServerImage(
+                    drawableRes = R.drawable.ic_background,
+                    contentScale = ImageContentScale.FILL_WIDTH,
+                    alignment = ImageAlignment.CENTER_CENTER,
+                    modifier = ServerModifier(width = 200f, height = 100f)
+                )
             )
         )
     LazyColumn(
