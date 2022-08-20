@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                                     alignment = ServerAlignment.CENTER,
                                     subviews = listOf(
                                         ServerImage(
-                                            url = R.drawable.ic_streak,
+                                            url = ImageSource.STREAK.url,
                                             modifier = ServerModifier(
                                                 width = 40f,
                                                 height = 40f,
@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
                                     modifier = ServerModifier(spacingTop = 20f),
                                     subviews = listOf(
                                         ServerImage(
-                                            url = R.drawable.ic_streak,
+                                            url = ImageSource.STREAK.url,
                                             modifier = ServerModifier(
                                                 width = 48f,
                                                 height = 48f,

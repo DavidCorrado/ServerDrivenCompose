@@ -9,15 +9,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.davidcorrado.serverdriven.R
+import com.davidcorrado.serverdriven.ImageSource
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 
 @Preview("CompleteList")
 @Composable
 fun CompleteList() {
-    val leftCounter = counter(27, "Active streak", R.drawable.ic_streak)
-    val rightCounter = counter(451, "Total entries", R.drawable.ic_total_entries)
+    val leftCounter = counter(27, "Active streak", ImageSource.STREAK.url)
+    val rightCounter = counter(451, "Total entries", ImageSource.TOTAL_ENTRIES.url)
     val data =
         ServerResponse(
             items = listOf(

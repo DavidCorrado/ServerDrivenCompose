@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.davidcorrado.serverdriven.ImageSource
 import com.davidcorrado.serverdriven.R
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
@@ -11,8 +12,8 @@ import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 @Preview("Counters")
 @Composable
 fun Counters() {
-    val leftCounter = counter(27, "Active streak", R.drawable.ic_streak)
-    val rightCounter = counter(451, "Total entries", R.drawable.ic_total_entries)
+    val leftCounter = counter(27, "Active streak", ImageSource.STREAK.url)
+    val rightCounter = counter(451, "Total entries", ImageSource.TOTAL_ENTRIES.url)
     val data =
         ServerResponse(
             items = listOf(
@@ -26,7 +27,7 @@ fun Counters() {
     SDContent(items = data.items)
 }
 
-fun counter(count: Int, label: String, @DrawableRes image: Int): ServerColumn {
+fun counter(count: Int, label: String, image: String): ServerColumn {
     return ServerColumn(
         modifier = ServerModifier(weight = 1f, backgroundColor = "#F5F5F5", cornerRadius = 16f), subviews = listOf(
             ServerText(

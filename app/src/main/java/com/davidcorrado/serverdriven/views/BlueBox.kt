@@ -3,7 +3,7 @@ package com.davidcorrado.serverdriven.views
 import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.davidcorrado.serverdriven.R
+import com.davidcorrado.serverdriven.ImageSource
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 
@@ -38,7 +38,7 @@ fun BlueCard(): ServerRow {
                                 subviews = listOf(
                                     ServerSpacer(),
                                     ServerImage(
-                                        url = R.drawable.ic_masked_check,
+                                        url = ImageSource.MASKED_CHECKED.url,
                                         modifier = ServerModifier(width = 192f, height = 80f)
                                     )
                                 )
@@ -84,7 +84,7 @@ fun BlueCard(): ServerRow {
                                 ),
                                 subviews = listOf(
                                     ServerImage(
-                                        url = R.drawable.ic_arrow_right,
+                                        url = ImageSource.ARROW_RIGHT.url,
                                         modifier = ServerModifier(
                                             width = 10f,
                                             height = 6f,

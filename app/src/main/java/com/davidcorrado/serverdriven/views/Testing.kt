@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.davidcorrado.serverdriven.ImageSource
 import com.davidcorrado.serverdriven.R
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
@@ -28,14 +29,15 @@ fun Testing2Preview() {
             ) {
                 Row {
                     Image(
-                        alignment = Alignment.TopCenter,//Maybe support this?
+                        alignment = Alignment.TopCenter, // Maybe support this?
                         modifier = Modifier
-                            //.height(300.dp)
+                            // .height(300.dp)
                             .weight(1f)
                             .aspectRatio(.3f)
-                            .background(Color.Green),//Fill width not working
+                            .background(Color.Green),
+                        // Fill width not working
                         painter = painterResource(id = R.drawable.ic_disappointed),
-                        contentScale = ContentScale.Fit,//Support this
+                        contentScale = ContentScale.Fit, // Support this
                         contentDescription = "test"
                     )
                 }
@@ -219,7 +221,7 @@ fun TestingPreview() {
                         ),
                         ServerText(text = "Read me Heading", isHeading = true),
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            url = ImageSource.DISAPPOINTED.url,
                             modifier = ServerModifier(
                                 adaText = "Disappointed",
                                 height = 20f,
@@ -227,7 +229,7 @@ fun TestingPreview() {
                             )
                         ),
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            url = ImageSource.DISAPPOINTED.url,
                             modifier = ServerModifier(height = 20f, width = 20f)
                         )
                     )
@@ -557,11 +559,11 @@ fun TestingPreview() {
                 ServerRow(
                     subviews = listOf(
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            url = ImageSource.DISAPPOINTED.url,
                             modifier = ServerModifier(height = 20f, width = 20f)
                         ),
                         ServerImage(
-                            url = R.drawable.ic_disappointed,
+                            url = ImageSource.DISAPPOINTED.url,
                             modifier = ServerModifier(
                                 height = 20f,
                                 width = 20f,
@@ -772,7 +774,7 @@ fun TestingPreview() {
                     )
                 ),
                 ServerImage(
-                    url = R.drawable.ic_running,
+                    url = ImageSource.RUNNING.url,
                     tint = "#FF0000",
                     modifier = ServerModifier(height = 20f, width = 20f)
                 ),
@@ -783,7 +785,7 @@ fun TestingPreview() {
                                 ServerRow(
                                     subviews = listOf(
                                         ServerImage(
-                                            url = R.drawable.ic_background,
+                                            url = ImageSource.BACKGROUND.url,
                                             alignment = ImageAlignment.TOP_END,
                                             modifier = ServerModifier(
                                                 weight = 1f,
@@ -822,7 +824,7 @@ fun TestingPreview() {
                                 ServerRow(
                                     subviews = listOf(
                                         ServerImage(
-                                            url = R.drawable.ic_background,
+                                            url = ImageSource.BACKGROUND.url,
                                             alignment = ImageAlignment.BOTTOM_END,
                                             modifier = ServerModifier(
                                                 weight = 1f,
@@ -855,31 +857,31 @@ fun TestingPreview() {
                 ),
                 ServerSpacer(modifier = ServerModifier(height = 20f)),
                 ServerImage(
-                    url = R.drawable.ic_background,
+                    url = ImageSource.BACKGROUND.url,
                     contentScale = ImageContentScale.FILL_WIDTH,
                     alignment = ImageAlignment.CENTER_CENTER,
                     modifier = ServerModifier(width = 100f, height = 100f)
                 ),
                 ServerImage(
-                    url = R.drawable.ic_background,
+                    url = ImageSource.BACKGROUND.url,
                     contentScale = ImageContentScale.FILL_HEIGHT,
                     alignment = ImageAlignment.CENTER_END,
                     modifier = ServerModifier(width = 100f, height = 200f)
                 ),
                 ServerImage(
-                    url = R.drawable.ic_background,
+                    url = ImageSource.BACKGROUND.url,
                     contentScale = ImageContentScale.CROP,
                     alignment = ImageAlignment.CENTER_END,
                     modifier = ServerModifier(width = 100f, height = 100f)
                 ),
                 ServerImage(
-                    url = R.drawable.ic_background,
+                    url = ImageSource.BACKGROUND.url,
                     contentScale = ImageContentScale.FIT,
                     alignment = ImageAlignment.CENTER_CENTER,
                     modifier = ServerModifier(width = 100f, height = 100f)
                 ),
                 ServerImage(
-                    url = R.drawable.ic_background,
+                    url = ImageSource.BACKGROUND.url,
                     contentScale = ImageContentScale.FILL_WIDTH,
                     alignment = ImageAlignment.CENTER_CENTER,
                     modifier = ServerModifier(width = 200f, height = 100f)

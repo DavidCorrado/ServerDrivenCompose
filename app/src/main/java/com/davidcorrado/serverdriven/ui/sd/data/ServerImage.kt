@@ -7,7 +7,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class ServerImage(
     val type: ServerItemType = ServerItemType.IMAGE,
-    val url: Int,
+    val url: String,
     val tint: String? = null,
     val contentScale: ImageContentScale? = null,
     val alignment: ImageAlignment? = null,
