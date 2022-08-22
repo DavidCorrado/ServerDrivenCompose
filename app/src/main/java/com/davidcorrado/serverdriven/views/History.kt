@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.davidcorrado.serverdriven.ImageSource
-import com.davidcorrado.serverdriven.R
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 
@@ -62,19 +61,9 @@ fun history1(): ServerColumn {
                                             spacingEnd = 8f,
                                         ),
                                     ),
-                                    ServerBubble(
-                                        backgroundColor = "#70DEB0",
-                                        text = ServerText(
-                                            text = "NORMAL",
-                                            color = "#094E44",
-                                            weight = "700",
-                                            size = 12,
-                                        ),
-                                        modifier = ServerModifier(
-                                            spacingEnd = 8f,
-                                        ),
-                                    ),
+                                    generateBubble(),
                                     ServerText(
+                                        modifier = ServerModifier(spacingStart = 8f),
                                         text = "Jogging or running",
                                         size = 12,
                                         weight = "500",

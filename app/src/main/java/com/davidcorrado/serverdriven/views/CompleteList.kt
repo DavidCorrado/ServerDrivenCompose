@@ -35,7 +35,8 @@ fun CompleteList() {
                 Entry()
             )
         )
-    Log.v("DavidData", "DavidWholeList" + data.toJson())
+    val jsonString = data.toJson()
+    Log.v("DavidData", "DavidWholeList = $jsonString")
     LazyColumn(
         modifier = Modifier.background(color = Color.Black.copy(alpha = 0.5f))
             .fillMaxSize()

@@ -70,19 +70,13 @@ fun Entry(): ServerRow {
                                             spacingEnd = 8f
                                         )
                                     ),
-                                    ServerBubble(
-                                        backgroundColor = "#70DEB0",
-                                        text = ServerText(
-                                            text = "NORMAL",
-                                            color = "#094E44",
-                                            weight = "700",
-                                            size = 12
-                                        ),
-                                        modifier = ServerModifier(
-                                            spacingEnd = 8f
-                                        )
+                                    generateBubbleWithImage(),
+                                    ServerText(
+                                        modifier = ServerModifier(spacingStart = 8f),
+                                        text = "Per AHA guidelines",
+                                        size = 12,
+                                        weight = "500"
                                     ),
-                                    ServerText(text = "Per AHA guidelines", size = 12, weight = "500"),
                                 )
                             ),
                         )
@@ -92,3 +86,5 @@ fun Entry(): ServerRow {
         )
     )
 }
+
+

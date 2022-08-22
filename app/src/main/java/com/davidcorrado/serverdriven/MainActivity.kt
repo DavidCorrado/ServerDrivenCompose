@@ -66,10 +66,6 @@ class MainActivity : ComponentActivity() {
                                         ServerText(
                                             text = "Average Sleep",
                                             modifier = ServerModifier(spacingStart = 16f)
-                                        ),
-                                        ServerBubble(
-                                            text = ServerText(text = "Bubble"),
-                                            backgroundColor = "#00FF00"
                                         )
                                     )
                                 )

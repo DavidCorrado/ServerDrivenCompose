@@ -33,9 +33,6 @@ fun SDContent(item: Any?, scope: Any? = null) {
         is ServerText -> {
             SDText(serverText = item, scope = scope)
         }
-        is ServerBubble -> {
-            SDBubble(serverBubble = item, scope = scope)
-        }
         is ServerSpacer -> {
             SDSpacer(serverSpacer = item, scope = scope)
         }
