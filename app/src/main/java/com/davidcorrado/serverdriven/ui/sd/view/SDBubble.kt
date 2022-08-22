@@ -11,7 +11,7 @@ import com.davidcorrado.serverdriven.ui.view.AppBubble
 @Composable
 fun SDBubble(serverBubble: ServerBubble, scope: Any?) {
     AppBubble(
-        drawableRes = serverBubble.drawableRes,
+        imageUrl = serverBubble.imageUrl,
         text = serverBubble.text.text,
         modifier = Modifier.toModifier(serverBubble.modifier, scope).semantics {
             contentDescription = serverBubble.getTextAda()

@@ -10,15 +10,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import coil.compose.LocalImageLoader
+import coil.compose.rememberImagePainter
+import coil.decode.SvgDecoder
 
 @Composable
 fun AppBubble(
     modifier: Modifier = Modifier,
-    drawableRes: Int? = null,
+    imageUrl: String? = null,
     text: String,
     backgroundColor: Color,
     strokeColor: Color = backgroundColor,
@@ -35,9 +38,14 @@ fun AppBubble(
             .padding(horizontal = 8.dp, vertical = 6.dp),
         horizontalArrangement = Arrangement.End,
     ) {
-        drawableRes?.run {
+        imageUrl?.run {
             Image(
-                painter = painterResource(this),
+                painter = rememberImagePainter(
+                    this,
+                    LocalImageLoader.current.newBuilder().componentRegistry {
+                        add(SvgDecoder(LocalContext.current))
+                    }.build()
+                ),
                 contentDescription = null,
                 alignment = Alignment.CenterStart,
                 modifier = Modifier

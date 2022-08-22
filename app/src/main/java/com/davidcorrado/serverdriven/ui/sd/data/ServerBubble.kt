@@ -9,7 +9,7 @@ data class ServerBubble(
     val type: ServerItemType = ServerItemType.BUBBLE,
     val text: ServerText,
     val textADA: String? = null,
-    val drawableRes: Int? = null,
+    val imageUrl: String? = null,
     val backgroundColor: String? = null,
     val strokeColor: String? = null,
     val modifier: ServerModifier? = null,

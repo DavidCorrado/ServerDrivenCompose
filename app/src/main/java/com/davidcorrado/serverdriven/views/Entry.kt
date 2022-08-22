@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.davidcorrado.serverdriven.ImageSource
-import com.davidcorrado.serverdriven.R
 import com.davidcorrado.serverdriven.ui.sd.data.*
 import com.davidcorrado.serverdriven.ui.sd.view.SDContent
 
